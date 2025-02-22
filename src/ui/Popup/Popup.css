@@ -1,0 +1,46 @@
+/* Overlay hinter dem Popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Halbdurchsichtiger schwarzer Hintergrund */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9001; /* Stellt sicher, dass das Popup über allem liegt */
+  }
+  
+  /* Popup-Container */
+  .popup-container {
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px; /* Maximalbreite für das Popup */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Schattenwurf für Tiefe */
+    position: relative; /* Wichtig für den Schließen-Button */
+    z-index: 1001; /* Höher als der Overlay */
+  }
+  
+  /* Schließen-Button im Popup */
+  .popup-close {
+    background: #ff5f57; /* Roter Farbton für den Schließen-Button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  /* Inhalt des Popups */
+  .popup-content {
+    margin-top: 40px; /* Platz über dem Schließen-Button */
+    max-height: 80vh; /* Maximale Höhe, um den Inhalt scrollbar zu machen */
+    overflow-y: auto;
+  }
+  
