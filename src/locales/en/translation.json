@@ -15,6 +15,8 @@
     "settings_Dialog_DeleteAllSuccessful": "All data has been successfully deleted. Please restart the application so that no new data is stored!",
     "settings_Dialog_DeleteAll": "Are you sure you want to delete all entries?",
   
+    "navbar_searchForm": "Customer Card search...",
+
     "map_Loading": "Map is loading...",
     "map_Here": "You are here",
     "eventForm_endDate": "End Date",

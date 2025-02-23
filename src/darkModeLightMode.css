@@ -1,0 +1,65 @@
+.darkMode .backgroundColor {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.darkMode .placeHolderColor::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.darkMode .backgroundColorHighlight {
+  background-color: #49454f;
+  color: white;
+}
+
+.darkMode .backgroundColorNotFocused {
+  background-color: #161616;
+  color: white;
+}
+
+.darkMode .backgroundColorOnGrey {
+  background-color: #25262b;
+  color: white;
+}
+
+.darkMode .progressBarContainerStyle {
+  background-color: "#333";
+}
+
+.lightMode .progressBarContainerStyle {
+  background-color: #e0e0e0;
+}
+
+.lightMode .backgroundColor {
+  background-color: #f5f5f5;
+  color: #212121;
+}
+
+.lightMode .placeHolderColor::placeholder {
+  color: #212121;
+  opacity: 1;
+}
+
+.lightMode .backgroundColorHighlight {
+  background-color: #66b0b0;
+  color: #212121;
+}
+
+.lightMode .shadow {
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+}
+
+.lightMode .backgroundColorNotFocused {
+  background-color: #3d6868;
+  color: #e0e0e0;
+}
+
+.lightMode .backgroundColorOnGrey {
+  background-color: #e0e0e0;
+  color: #212121;
+}
+
+.lightMode .iconColor {
+  color: #e0e0e0;
+}

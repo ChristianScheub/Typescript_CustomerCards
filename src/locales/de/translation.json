@@ -15,6 +15,9 @@
     "settings_Dialog_DeleteAllSuccessful": "Alle Daten wurden erfolgreich gelöscht. Bitte starten Sie die Anwendung neu, damit keine neuen Daten gespeichert werden!",
     "settings_Dialog_DeleteAll": "Sind Sie sicher, dass Sie alle Einträge löschen möchten?",
 
+    "navbar_searchForm": "Karte suchen...",
+
+
     "map_Loading": "Karte wird geladen...",
     "map_Here": "Sie sind hier",
     "eventForm_endDate": "Enddatum",
