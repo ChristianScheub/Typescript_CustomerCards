@@ -4,7 +4,7 @@ type Props = {
   scanResult?: string;
 };
 
-export const ScannerView = ({ onScan, onError, scanResult }: Props) => (
+export const ScannerView = ({ onScan,scanResult }: Props) => (
   <div className="scanner-wrapper">
     <button onClick={onScan} className="scan-trigger">
       Scan starten

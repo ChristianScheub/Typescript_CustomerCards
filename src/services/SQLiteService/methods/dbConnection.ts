@@ -1,14 +1,27 @@
-import { CapacitorSQLite, SQLiteConnection, SQLiteDBConnection } from "@capacitor-community/sqlite";
+import Logger from "../../Logger/logger";
+import { DB_NAME, STORE_NAME } from "../configDB";
 
-const DB_NAME = "customer_cards_db";
+export const getDbConnection = async (): Promise<IDBDatabase> => {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(DB_NAME, 1);
 
-let db: SQLiteDBConnection | null = null;
+    request.onupgradeneeded = (event) => {
+      const db = (event.target as IDBOpenDBRequest).result;
+      if (!db.objectStoreNames.contains(STORE_NAME)) {
+        db.createObjectStore(STORE_NAME, { keyPath: "id" });
+        Logger.infoService("Datenbank und ObjectStore wurden erstellt.");
+      }
+    };
 
-export const getDbConnection = async (): Promise<SQLiteDBConnection> => {
-  if (!db) {
-    const sqlite = new SQLiteConnection(CapacitorSQLite);
-    db = await sqlite.createConnection(DB_NAME, false, "no-encryption", 1, false);
-    await db.open();
-  }
-  return db;
+    request.onsuccess = () => {
+      const db = request.result;
+      Logger.infoService("Datenbank erfolgreich initialisiert.");
+      resolve(db);
+    };
+
+    request.onerror = () => {
+      Logger.error("Fehler beim Initialisieren der Datenbank."+ request.error);
+      reject(request.error);
+    };
+  });
 };

@@ -1,19 +1,31 @@
 import Logger from "../../Logger/logger";
-import { getDbConnection } from "./dbConnection";
+
+const DB_NAME = "customer_cards_db";
+const STORE_NAME = "customer_cards";
+
+let db: IDBDatabase | null = null;
 
 export const initialize = async (): Promise<void> => {
-  const db = await getDbConnection();
-  Logger.infoService("Init DB new");
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(DB_NAME, 1);
 
-  await db.execute(`
-    CREATE TABLE IF NOT EXISTS customer_cards (
-      id TEXT PRIMARY KEY,
-      shopName TEXT NOT NULL,
-      cardContent TEXT NOT NULL,
-      codeType TEXT NOT NULL,
-      barcodeEncoding TEXT,
-      createdAt TEXT NOT NULL,
-      updatedAt TEXT NOT NULL
-    );
-  `);
+    request.onupgradeneeded = (event) => {
+      const db = (event.target as IDBOpenDBRequest).result;
+      if (!db.objectStoreNames.contains(STORE_NAME)) {
+        db.createObjectStore(STORE_NAME, { keyPath: "id" });
+        Logger.infoService("Datenbank und ObjectStore wurden erstellt.");
+      }
+    };
+
+    request.onsuccess = () => {
+      db = request.result;
+      Logger.infoService("Datenbank erfolgreich initialisiert.");
+      resolve();
+    };
+
+    request.onerror = () => {
+      Logger.error("Fehler beim Initialisieren der Datenbank."+ request.error);
+      reject(request.error);
+    };
+  });
 };

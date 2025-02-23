@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ScannerSelector from "./views/ScannerSelectorView";
 import NavBarContainer from "./container/NavBarContainer/container-navBar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Datenschutz from "./legal/datenschutz";
@@ -14,6 +13,7 @@ import CustomerCardContainer from "./container/CustomerCardContainer";
 const App: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const theme = useDarkMode();
+  console.log(searchQuery);
 
   return (
     <div className={theme}>
