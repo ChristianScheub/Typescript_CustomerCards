@@ -2,12 +2,15 @@ import React from "react";
 import "./CustomerCardView.css"; 
 import Card from "../ui/Card/Card";
 import { CustomerCard } from "../services/SQLiteService/types/CustomerCard";
+import FloatingBtn, { ButtonAlignment } from "../ui/floatingBtn/floatingBtn";
+import { IoAddOutline } from "react-icons/io5";
 
 interface CustomerCardViewProps {
   cards: CustomerCard[];
+  openAddNewCard: () => void;
 }
 
-const CustomerCardView: React.FC<CustomerCardViewProps> = ({ cards }) => {
+const CustomerCardView: React.FC<CustomerCardViewProps> = ({ cards,openAddNewCard }) => {
   return (
     <div className="customer-card-view">
       <h1>Meine Kundenkarten</h1>
@@ -22,6 +25,12 @@ const CustomerCardView: React.FC<CustomerCardViewProps> = ({ cards }) => {
           </Card>
         ))}
       </div>
+      <FloatingBtn
+        alignment={ButtonAlignment.RIGHT}
+        icon={IoAddOutline}
+        onClick={openAddNewCard}
+        ariaLabelledBy="Legal Notes Button"
+      />
     </div>
   );
 };
