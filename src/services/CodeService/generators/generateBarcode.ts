@@ -7,5 +7,6 @@ export const generateBarcode = (value: string, barcodeType: BarcodeType) => {
   Logger.infoService("Generate Barcode called");
   validateInput(value);
   const svg = generateBarcodeSvg(value, barcodeType,);
-  return `data:image/svg+xml;base64,${btoa(svg)}`;
+  Logger.infoService(svg);
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
 };

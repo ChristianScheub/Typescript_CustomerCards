@@ -5,7 +5,7 @@ const featureFlag_FastRelease_deactivateForum: boolean = true; //Show forum func
 const featureFlag_Debug_StoreLogs: boolean = false; //Store logs in the local storage
 
 
-const featureFlag_Debug_AllLogs: boolean = false; //Show all logs in the console
+const featureFlag_Debug_AllLogs: boolean = true; //Show all logs in the console
 const featureFlag_Debug_Log_infoRedux: boolean = false; //Show info logs of the setter in the console
 const featureFlag_Debug_Log_Service: boolean = false; //Show info logs of the setter in the console
 const featureFlag_Debug_Log_Info: boolean = false; //Show info logs in the console
