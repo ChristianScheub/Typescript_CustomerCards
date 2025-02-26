@@ -1,23 +1,28 @@
 import React from "react";
-import { QRScanner } from "../../ui/QRScanner";
 import { BarcodeScanner } from "../../ui/BarcodeScanner";
 import { CodeType } from "../../services/SQLiteService/types/CodeType";
+import Card from "../../ui/Card/Card";
+import MaterialInput from "../../ui/MaterialInput";
+import FloatingBtn, { ButtonAlignment } from "../../ui/floatingBtn/floatingBtn";
+import { FaRegSave } from "react-icons/fa";
+import { BarcodeType } from "../../types/BarcodeTypes";
 
 interface NewCardViewProps {
   scannerType: CodeType;
   scannedCode: string | null;
   shopName: string;
+  barcodeFormat: string;
   onSelectScanner: (type: CodeType) => void;
-  onScan: (data: string | null) => void;
+  onScan: (data: string | null, format: BarcodeType) => void;
   onAddCard: () => void;
-  onShopNameChange: (name: string) => void;
+  onShopNameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
-
 
 const NewCardView: React.FC<NewCardViewProps> = ({
   scannerType,
   scannedCode,
   shopName,
+  barcodeFormat,
   onSelectScanner,
   onScan,
   onAddCard,
@@ -25,43 +30,41 @@ const NewCardView: React.FC<NewCardViewProps> = ({
 }) => {
   return (
     <div>
-      <h1>Scanner Auswahl</h1>
+      <Card className="customer-card backgroundColorHighlight">
+        <h1>Scanner Auswahl</h1>
 
-      {/* Eingabefeld für den Shop-Namen */}
-      <div>
-        <label htmlFor="shopName">Shop-Name:</label>
-        <input
-          id="shopName"
-          type="text"
-          value={shopName}
-          onChange={(e) => onShopNameChange(e.target.value)}
-          placeholder="Geben Sie den Shop-Namen ein"
-        />
-      </div>
+        {/* Eingabefeld für den Shop-Namen */}
+        <div>
+          <MaterialInput
+            value={shopName}
+            onChange={(e) => onShopNameChange(e)}
+            type="text"
+            label="Geben Sie den Shop-Namen ein"
+          />
+        </div>
+        <br />
 
-      {/* Auswahlmöglichkeiten für den Nutzer */}
-      <div>
-        <button onClick={() => onSelectScanner(CodeType.QR_CODE)}>QR-Code Scanner</button>
-        <button onClick={() => onSelectScanner(CodeType.BARCODE)}>Barcode Scanner</button>
-      </div>
+        <div>
+          <button onClick={() => onSelectScanner(CodeType.BARCODE)}>
+            Scanner
+          </button>
+        </div>
 
-      {/* Anzeigen des entsprechenden Scanners basierend auf der Auswahl */}
-      <div>
-        {scannerType === CodeType.QR_CODE && <QRScanner onScan={onScan} />}
-        {scannerType === CodeType.BARCODE && <BarcodeScanner onScan={onScan} />}
-      </div>
+        <div>
+          {scannerType === CodeType.BARCODE && (
+            <BarcodeScanner onScan={onScan} />
+          )}
+        </div>
 
-      {/* Anzeige des gescannten Codes */}
-      <div>
-        {scannedCode && (
-          <p>Gescannt: {scannedCode}</p>
-        )}
-      </div>
-
-      {/* Button zum Hinzufügen der Kundenkarte */}
-      <div>
-        <button onClick={onAddCard}>Kundenkarte hinzufügen</button>
-      </div>
+        <div>{scannedCode && <p>Gescannt: {scannedCode}</p>}</div>
+        <div>{barcodeFormat && <p>Format: {barcodeFormat}</p>}</div>
+      </Card>
+      <FloatingBtn
+        alignment={ButtonAlignment.RIGHT}
+        icon={FaRegSave}
+        onClick={onAddCard}
+        ariaLabelledBy="Legal Notes Button"
+      />
     </div>
   );
 };

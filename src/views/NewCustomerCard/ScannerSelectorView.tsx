@@ -17,13 +17,11 @@ const ScannerSelector: React.FC = () => {
       
       {/* Auswahlmöglichkeiten für den Nutzer */}
       <div>
-        <button onClick={() => setScannerType("QR")}>QR-Code Scanner</button>
         <button onClick={() => setScannerType("Barcode")}>Barcode Scanner</button>
       </div>
 
       {/* Anzeigen des entsprechenden Scanners basierend auf der Auswahl */}
       <div>
-        {scannerType === "QR" && <QRScanner onScan={handleScan} />}
         {scannerType === "Barcode" && <BarcodeScanner onScan={handleScan} />}
       </div>
 

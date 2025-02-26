@@ -6,7 +6,7 @@ export interface CustomerCard {
     shopName: string; // Name des Shops
     cardContent: string; // Inhalt des Codes (z. B. QR-Code-Daten oder Barcode-Wert)
     codeType: CodeType; // Typ des Codes (QR oder Barcode)
-    barcodeEncoding?: BarcodeType; // Optional: Encoding-Typ für Barcodes
+    barcodeEncoding: BarcodeType; // Encoding-Typ für Barcodes
     createdAt: Date; // Zeitstempel der Erstellung
     updatedAt: Date; // Zeitstempel der letzten Aktualisierung
   }

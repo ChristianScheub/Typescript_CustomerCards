@@ -4,15 +4,30 @@ import sqliteService from "../services/SQLiteService";
 import { CustomerCard } from "../services/SQLiteService/types/CustomerCard";
 import { CodeType } from "../services/SQLiteService/types/CodeType";
 import { BarcodeType } from "../types/BarcodeTypes";
+import Logger from "../services/Logger/logger";
 
 const NewCardContainer: React.FC = () => {
   const [scannerType, setScannerType] = useState<CodeType.QR_CODE | CodeType.BARCODE | CodeType.NULL >(CodeType.NULL );
   const [scannedCode, setScannedCode] = useState<string | null>(null);
   const [shopName, setShopName] = useState<string>("");
+  const [barcodeFormat, setBarcodeFormat] = useState<BarcodeType>(BarcodeType.CODE128 );
+
+
+  const handleShopNameChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    Logger.info(
+      "Shop Name was set to: " + event.target.value
+    );
+   setShopName(event.target.value);
+
+  };
+
 
   // Callback für beide Scanner, der den gescannten Code anzeigt
-  const handleScan = (data: string | null) => {
+  const handleScan = (data: string | null,format: BarcodeType) => {
     setScannedCode(data);
+    setBarcodeFormat(format);
   };
 
   // Funktion zum Hinzufügen der Kundenkarte
@@ -26,8 +41,7 @@ const NewCardContainer: React.FC = () => {
           shopName,
           cardContent: scannedCode,
           codeType: scannerType,
-          // Wenn Barcode ausgewählt wurde, setze das Encoding, ansonsten undefined
-          barcodeEncoding: scannerType === CodeType.BARCODE ? BarcodeType.CODE128 : undefined,
+          barcodeEncoding: barcodeFormat
         };
 
         // Speichere die Karte in der Datenbank
@@ -49,15 +63,18 @@ const NewCardContainer: React.FC = () => {
     }
   };
 
+  
+
   return (
     <NewCardView
       scannerType={scannerType}
       scannedCode={scannedCode}
       shopName={shopName}
+      barcodeFormat={barcodeFormat}
       onSelectScanner={setScannerType}
       onScan={handleScan}
       onAddCard={handleAddCard}
-      onShopNameChange={setShopName}
+      onShopNameChange={handleShopNameChange}
     />
   );
 };

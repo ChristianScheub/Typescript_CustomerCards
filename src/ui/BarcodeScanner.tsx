@@ -5,7 +5,7 @@ import Logger from "../services/Logger/logger";
 import { BarcodeType } from "../types/BarcodeTypes";
 
 interface BarcodeScannerProps {
-  onScan: (data: string | null) => void;
+  onScan: (data: string | null, format: BarcodeType) => void;
 }
 
 export const BarcodeScanner: React.FC<BarcodeScannerProps> = ({ onScan }) => {
@@ -17,6 +17,7 @@ export const BarcodeScanner: React.FC<BarcodeScannerProps> = ({ onScan }) => {
     [BarcodeFormat.CODE_128]: BarcodeType.CODE128,
     [BarcodeFormat.UPC_A]: BarcodeType.UPC_A,
     [BarcodeFormat.CODE_39]: BarcodeType.CODE39,
+    [BarcodeFormat.QR_CODE]: BarcodeType.QRCode, 
   };
   
   useEffect(() => {
@@ -36,7 +37,9 @@ export const BarcodeScanner: React.FC<BarcodeScannerProps> = ({ onScan }) => {
                   const format = formatMapping[result.getBarcodeFormat()];
                   Logger.info("Barcode detected: " + result.getText());
                   Logger.info("Format was"+format);
-                  onScan(result.getText());
+                  if(format){
+                    onScan(result.getText(),format);
+                  }
                 }
                 if (error) {
                   Logger.error("Error scanning barcode: " + error);

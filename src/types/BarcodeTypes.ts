@@ -3,5 +3,6 @@ export enum BarcodeType {
     EAN13 = "EAN13",
     UPC_A = "UPC_A",
     CODE39 = "CODE39",
+    QRCode = "QRCode"
   }
   

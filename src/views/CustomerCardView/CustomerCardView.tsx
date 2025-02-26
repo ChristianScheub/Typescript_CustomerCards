@@ -6,8 +6,8 @@ import { CustomerCard } from "../../services/SQLiteService/types/CustomerCard";
 import FloatingBtn, { ButtonAlignment } from "../../ui/floatingBtn/floatingBtn";
 import { IoAddOutline } from "react-icons/io5";
 import { BarcodeType } from "../../types/BarcodeTypes";
-import BarcodeGeneratorContainer from "../../container/BarcodeContainer";
-import QRCodeGeneratorContainer from "../../container/QRCodeGeneratorContainer";
+import BarcodeGeneratorContainer from "../../container/GeneratorBarcodeContainer";
+import QRCodeGeneratorContainer from "../../container/GeneratorQRCodeContainer";
 import { CodeType } from "../../services/SQLiteService/types/CodeType";
 
 interface CustomerCardViewProps {
@@ -33,8 +33,10 @@ const CustomerCardView: React.FC<CustomerCardViewProps> = ({
             <h2>{card.shopName}</h2>
             <p>{card.cardContent}</p>
             <p>Typ: {card.codeType}</p>
+            <p>Encoding: {card.barcodeEncoding}</p>
 
-            {card.codeType === CodeType.QR_CODE ? (
+
+            {card.barcodeEncoding === BarcodeType.QRCode ? (
               <QRCodeGeneratorContainer
                 value={card.cardContent}
                 size={128}

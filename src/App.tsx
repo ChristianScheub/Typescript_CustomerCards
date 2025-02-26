@@ -9,7 +9,6 @@ import "./darkModeLightMode.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CustomerCardContainer from "./container/CustomerCardContainer";
-import ScannerSelector from "./views/NewCustomerCard/ScannerSelectorView";
 import NewCardContainer from "./container/NewCardContainer";
 import ContainerInfo from "./container/InfoContainer";
 
