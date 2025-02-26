@@ -1,4 +1,4 @@
-import Logger from "../../Logger/logger";
+import Logger from "../Logger/logger";
 
 export const validateInput = (value: string) => {
   Logger.infoService("validate Input:"+value);

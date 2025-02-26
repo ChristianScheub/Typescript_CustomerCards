@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import NewCardView from "../views/NewCardView";
+import NewCardView from "../views/NewCustomerCard/NewCardView";
 import sqliteService from "../services/SQLiteService";
 import { CustomerCard } from "../services/SQLiteService/types/CustomerCard";
 import { CodeType } from "../services/SQLiteService/types/CodeType";
-import { BarcodeType } from "../services/CodeService/types/BarcodeTypes";
+import { BarcodeType } from "../types/BarcodeTypes";
 
 const NewCardContainer: React.FC = () => {
   const [scannerType, setScannerType] = useState<CodeType.QR_CODE | CodeType.BARCODE | CodeType.NULL >(CodeType.NULL );

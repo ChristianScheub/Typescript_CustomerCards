@@ -1,6 +1,5 @@
 const featureFlag_Debug_View: boolean = false; //Show some dev things in the view
-const featureFlag_Debug_Settings_View: boolean = false; //Show dev settings things in the view
-const featureFlag_FastRelease_deactivateForum: boolean = true; //Show forum functionality
+const featureFlag_Debug_Settings_View: boolean = true; //Show dev settings things in the view
 
 const featureFlag_Debug_StoreLogs: boolean = false; //Store logs in the local storage
 
@@ -12,4 +11,4 @@ const featureFlag_Debug_Log_Info: boolean = false; //Show info logs in the conso
 const featureFlag_Debug_Log_Warning: boolean = false; //Show warning logs in the console
 const featureFlag_Debug_Log_Error: boolean = false; //Show error logs in the console
 
-export { featureFlag_FastRelease_deactivateForum,featureFlag_Debug_Settings_View,featureFlag_Debug_View, featureFlag_Debug_StoreLogs, featureFlag_Debug_Log_Service, featureFlag_Debug_AllLogs, featureFlag_Debug_Log_infoRedux,featureFlag_Debug_Log_Error,featureFlag_Debug_Log_Warning,featureFlag_Debug_Log_Info };
+export {featureFlag_Debug_Settings_View,featureFlag_Debug_View, featureFlag_Debug_StoreLogs, featureFlag_Debug_Log_Service, featureFlag_Debug_AllLogs, featureFlag_Debug_Log_infoRedux,featureFlag_Debug_Log_Error,featureFlag_Debug_Log_Warning,featureFlag_Debug_Log_Info };

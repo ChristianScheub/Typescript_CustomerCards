@@ -1,4 +1,4 @@
-import { BarcodeType } from "../../CodeService/types/BarcodeTypes";
+import { BarcodeType } from "../../../types/BarcodeTypes";
 import { CodeType } from "./CodeType";
 
 export interface CustomerCard {

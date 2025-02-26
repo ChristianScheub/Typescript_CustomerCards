@@ -9,8 +9,9 @@ import "./darkModeLightMode.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CustomerCardContainer from "./container/CustomerCardContainer";
-import ScannerSelector from "./views/ScannerSelectorView";
+import ScannerSelector from "./views/NewCustomerCard/ScannerSelectorView";
 import NewCardContainer from "./container/NewCardContainer";
+import ContainerInfo from "./container/InfoContainer";
 
 const App: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -34,6 +35,7 @@ const App: React.FC = () => {
               <Route path="/datenschutz" element={<Datenschutz />} />
               <Route path="/impressum" element={<Impressum />} />
               <Route path="newCard" element={<NewCardContainer />} />
+              <Route path="/settings" element={<ContainerInfo />} />
 
               <Route path="/" element={<CustomerCardContainer />} />
             </Routes>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { QRScanner } from "../ui/QRScanner";
-import { BarcodeScanner } from "../ui/BarcodeScanner";
+import { QRScanner } from "../../ui/QRScanner";
+import { BarcodeScanner } from "../../ui/BarcodeScanner";
 
 const ScannerSelector: React.FC = () => {
   const [scannerType, setScannerType] = useState<"QR" | "Barcode" | null>(null);

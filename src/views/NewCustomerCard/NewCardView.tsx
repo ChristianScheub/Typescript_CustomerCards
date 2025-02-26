@@ -1,7 +1,7 @@
 import React from "react";
-import { QRScanner } from "../ui/QRScanner";
-import { BarcodeScanner } from "../ui/BarcodeScanner";
-import { CodeType } from "../services/SQLiteService/types/CodeType";
+import { QRScanner } from "../../ui/QRScanner";
+import { BarcodeScanner } from "../../ui/BarcodeScanner";
+import { CodeType } from "../../services/SQLiteService/types/CodeType";
 
 interface NewCardViewProps {
   scannerType: CodeType;
@@ -12,6 +12,7 @@ interface NewCardViewProps {
   onAddCard: () => void;
   onShopNameChange: (name: string) => void;
 }
+
 
 const NewCardView: React.FC<NewCardViewProps> = ({
   scannerType,

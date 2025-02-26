@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import sqliteService from "../services/SQLiteService";
 import { CustomerCard } from "../services/SQLiteService/types/CustomerCard";
-import CustomerCardView from "../views/CustomerCardView";
+import CustomerCardView from "../views/CustomerCardView/CustomerCardView";
 import Logger from "../services/Logger/logger";
 import { useNavigate } from "react-router-dom";
 

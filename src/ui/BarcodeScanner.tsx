@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { BarcodeFormat, BrowserMultiFormatReader } from '@zxing/library';
 import { useTranslation } from "react-i18next";
 import Logger from "../services/Logger/logger";
-import { BarcodeType } from "../services/CodeService/types/BarcodeTypes";
+import { BarcodeType } from "../types/BarcodeTypes";
 
 interface BarcodeScannerProps {
   onScan: (data: string | null) => void;
