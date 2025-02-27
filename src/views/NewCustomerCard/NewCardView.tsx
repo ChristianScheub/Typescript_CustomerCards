@@ -1,5 +1,5 @@
 import React from "react";
-import { BarcodeScanner } from "../../ui/BarcodeScanner";
+import { BarcodeScannerComponent } from "../../ui/BarcodeScanner";
 import { CodeType } from "../../services/SQLiteService/types/CodeType";
 import Card from "../../ui/Card/Card";
 import MaterialInput from "../../ui/MaterialInput";
@@ -52,7 +52,7 @@ const NewCardView: React.FC<NewCardViewProps> = ({
 
         <div>
           {scannerType === CodeType.BARCODE && (
-            <BarcodeScanner onScan={onScan} />
+            <BarcodeScannerComponent onScan={onScan} />
           )}
         </div>
 

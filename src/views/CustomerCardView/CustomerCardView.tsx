@@ -8,7 +8,6 @@ import { IoAddOutline } from "react-icons/io5";
 import { BarcodeType } from "../../types/BarcodeTypes";
 import BarcodeGeneratorContainer from "../../container/GeneratorBarcodeContainer";
 import QRCodeGeneratorContainer from "../../container/GeneratorQRCodeContainer";
-import { CodeType } from "../../services/SQLiteService/types/CodeType";
 
 interface CustomerCardViewProps {
   cards: CustomerCard[];

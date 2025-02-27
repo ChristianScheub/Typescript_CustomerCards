@@ -16,6 +16,7 @@ const formatMap: Record<BarcodeType, "CODE128" | "EAN13" | "UPC" | "CODE39"> = {
   [BarcodeType.EAN13]: "EAN13",
   [BarcodeType.UPC_A]: "UPC",
   [BarcodeType.CODE39]: "CODE39",
+  [BarcodeType.QRCode]: "CODE128",
 };
 
 const BarcodeGeneratorView: React.FC<BarcodeGeneratorViewProps> = ({ value, type, width, height, color, error }) => {

@@ -1,80 +1,76 @@
-import React, { useEffect, useRef, useState } from "react";
-import { BarcodeFormat, BrowserMultiFormatReader } from '@zxing/library';
+import React, { useEffect } from "react";
+import { BarcodeScanner } from "@capacitor-community/barcode-scanner";
 import { useTranslation } from "react-i18next";
 import Logger from "../services/Logger/logger";
 import { BarcodeType } from "../types/BarcodeTypes";
 
 interface BarcodeScannerProps {
-  onScan: (data: string | null, format: BarcodeType) => void;
+  onScan: (data: string | null, format: BarcodeType) => void; // Format ist nie null
 }
 
-export const BarcodeScanner: React.FC<BarcodeScannerProps> = ({ onScan }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isCameraReady, setIsCameraReady] = useState(false);
-  const barcodeReader = useRef<BrowserMultiFormatReader | null>(null);
-  const formatMapping: { [key in BarcodeFormat]?: BarcodeType } = {
-    [BarcodeFormat.EAN_13]: BarcodeType.EAN13,
-    [BarcodeFormat.CODE_128]: BarcodeType.CODE128,
-    [BarcodeFormat.UPC_A]: BarcodeType.UPC_A,
-    [BarcodeFormat.CODE_39]: BarcodeType.CODE39,
-    [BarcodeFormat.QR_CODE]: BarcodeType.QRCode, 
-  };
-  
-  useEffect(() => {
-    if (videoRef.current) {
-      barcodeReader.current = new BrowserMultiFormatReader();
-
-      barcodeReader.current
-        .listVideoInputDevices()
-        .then((devices) => {
-          const videoDevice = devices[0]?.deviceId;
-          if (videoDevice) {
-            barcodeReader.current?.decodeFromVideoDevice(
-              videoDevice,
-              videoRef.current,
-              (result, error) => {
-                if (result) {
-                  const format = formatMapping[result.getBarcodeFormat()];
-                  Logger.info("Barcode detected: " + result.getText());
-                  Logger.info("Format was"+format);
-                  if(format){
-                    onScan(result.getText(),format);
-                  }
-                }
-                if (error) {
-                  Logger.error("Error scanning barcode: " + error);
-                }
-              }
-            );
-            setIsCameraReady(true);
-          }
-        })
-        .catch((err) => {
-          Logger.error("Error initializing video device: " + err);
-          setIsCameraReady(false);
-        });
-    }
-
-    return () => {
-      if (barcodeReader.current) {
-        barcodeReader.current.reset();
-      }
-    };
-  }, [onScan]);
-
+export const BarcodeScannerComponent: React.FC<BarcodeScannerProps> = ({
+  onScan,
+}) => {
   const { t } = useTranslation();
 
+  const formatMapping: { [key: string]: BarcodeType } = {
+    EAN_13: BarcodeType.EAN13,
+    CODE_128: BarcodeType.CODE128,
+    UPC_A: BarcodeType.UPC_A,
+    CODE_39: BarcodeType.CODE39,
+    QR_CODE: BarcodeType.QRCode,
+  };
+
+  useEffect(() => {
+    const prepareAndScan = async () => {
+      try {
+        // 1. Prepare the UI
+        await BarcodeScanner.hideBackground();
+        document.body.classList.add("barcode-scanner-active");
+
+        // 2. Check permissions
+        const status = await BarcodeScanner.checkPermission({ force: true });
+
+        if (!status.granted) {
+          Logger.error(t("barcodeScanner_permissionDenied"));
+          onScan(null, BarcodeType.CODE128);
+          return;
+        }
+
+        // 3. Start scanning
+        Logger.info("Starting barcode scanner...");
+        const result = await BarcodeScanner.startScan();
+
+        // 4. Handle result
+        if (result.hasContent) {
+          const mappedFormat =
+            formatMapping[result.format] || BarcodeType.CODE128;
+          onScan(result.content, mappedFormat);
+        } else {
+          onScan(null, BarcodeType.CODE128);
+        }
+      } catch (error) {
+        Logger.error("Scan error: " + error);
+        onScan(null, BarcodeType.CODE128);
+      } finally {
+        // 5. Cleanup
+        document.body.classList.remove("barcode-scanner-active");
+        await BarcodeScanner.showBackground();
+        await BarcodeScanner.stopScan();
+      }
+    };
+
+    prepareAndScan();
+
+    return () => {
+      BarcodeScanner.stopScan();
+      BarcodeScanner.showBackground();
+    };
+  }, [onScan, t]);
+
   return (
-    <>
-      <div style={{ display: isCameraReady ? "block" : "none" }}>
-        <video
-          ref={videoRef}
-          style={{ width: "100%", height: "auto", paddingTop: "5vh" }}
-        />
-      </div>
-      <p style={{ display: isCameraReady ? "none" : "block" }}>
-        {t("barcodeScanner_waitingCamera")}
-      </p>
-    </>
+    <div className="scanner-overlay">
+      {/* Optional: Add custom UI elements here */}
+    </div>
   );
 };

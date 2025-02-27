@@ -3,8 +3,6 @@ import Logger from "../../Logger/logger";
 const DB_NAME = "customer_cards_db";
 const STORE_NAME = "customer_cards";
 
-let db: IDBDatabase | null = null;
-
 export const initialize = async (): Promise<void> => {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(DB_NAME, 1);
@@ -18,7 +16,7 @@ export const initialize = async (): Promise<void> => {
     };
 
     request.onsuccess = () => {
-      db = request.result;
+      request.result;
       Logger.infoService("Datenbank erfolgreich initialisiert.");
       resolve();
     };
