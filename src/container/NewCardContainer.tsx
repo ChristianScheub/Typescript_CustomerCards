@@ -28,6 +28,7 @@ const NewCardContainer: React.FC = () => {
   const handleScan = (data: string | null,format: BarcodeType) => {
     setScannedCode(data);
     setBarcodeFormat(format);
+    setScannerType(CodeType.NULL);
   };
 
   // Funktion zum Hinzufügen der Kundenkarte

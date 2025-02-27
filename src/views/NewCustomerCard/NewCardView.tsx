@@ -33,7 +33,6 @@ const NewCardView: React.FC<NewCardViewProps> = ({
       <Card className="customer-card backgroundColorHighlight">
         <h1>Scanner Auswahl</h1>
 
-        {/* Eingabefeld für den Shop-Namen */}
         <div>
           <MaterialInput
             value={shopName}

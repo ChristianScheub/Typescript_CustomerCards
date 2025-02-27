@@ -16,34 +16,3 @@
 .margin2vw{
   margin: 2vw;
 }
-
-body.barcode-scanner-active {
-  background: transparent !important;
-  overflow: hidden;
-}
-
-body.barcode-scanner-active ion-app {
-  display: none;
-}
-
-.scanner-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 99999;
-  pointer-events: none;
-}
-
-/* Optional: Add a scanning frame animation */
-.scanner-overlay::before {
-  content: '';
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  right: 20%;
-  bottom: 20%;
-  border: 2px solid #fff;
-  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.5);
-}
