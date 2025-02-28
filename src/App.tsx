@@ -20,11 +20,11 @@ const App: React.FC = () => {
   return (
     <div className={theme}>
       <div
-        className="App backgroundColor"
+        className=" backgroundColor"
         style={{
           display: "flex",
           flexDirection: "column",
-          minHeight: "100vh",
+          minHeight: "100vh"
         }}
       >
           <BrowserRouter>

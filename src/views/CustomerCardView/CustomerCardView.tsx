@@ -8,6 +8,7 @@ import { IoAddOutline } from "react-icons/io5";
 import { BarcodeType } from "../../types/BarcodeTypes";
 import BarcodeGeneratorContainer from "../../container/GeneratorBarcodeContainer";
 import QRCodeGeneratorContainer from "../../container/GeneratorQRCodeContainer";
+import { featureFlag_Debug_View } from "../../config/featureFlags";
 
 interface CustomerCardViewProps {
   cards: CustomerCard[];
@@ -18,8 +19,6 @@ const CustomerCardView: React.FC<CustomerCardViewProps> = ({
   cards,
   openAddNewCard,
 }) => {
-
-
   return (
     <div className="customer-card-view">
       <h1>Meine Kundenkarten</h1>
@@ -30,10 +29,10 @@ const CustomerCardView: React.FC<CustomerCardViewProps> = ({
             className="customer-card backgroundColorHighlight"
           >
             <h2>{card.shopName}</h2>
-            <p>{card.cardContent}</p>
-            <p>Typ: {card.codeType}</p>
-            <p>Encoding: {card.barcodeEncoding}</p>
+            <p>Erstellt am: {new Date(card.createdAt).toLocaleDateString()}</p>
 
+            {featureFlag_Debug_View && <p>Code Typ (obsoleted): {card.codeType}</p>}
+            {featureFlag_Debug_View && <p>Encoding: {card.barcodeEncoding}</p>}
 
             {card.barcodeEncoding === BarcodeType.QRCode ? (
               <QRCodeGeneratorContainer
@@ -44,14 +43,13 @@ const CustomerCardView: React.FC<CustomerCardViewProps> = ({
             ) : (
               <BarcodeGeneratorContainer
                 value={card.cardContent}
-                type={BarcodeType.CODE128}
+                type={card.barcodeEncoding}
                 width={2}
                 height={100}
                 color="#000000"
               />
             )}
-
-            <p>Erstellt am: {new Date(card.createdAt).toLocaleDateString()}</p>
+            <p>{card.cardContent}</p>
           </Card>
         ))}
       </div>

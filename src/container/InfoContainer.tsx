@@ -48,10 +48,36 @@ const ContainerInfo: React.FC = () => {
   const handleDeleteAllClick = async (): Promise<void> => {
     if (window.confirm(t("settings_Dialog_DeleteAll"))) {
       localStorage.clear();
+  
+      if ("indexedDB" in window) {
+        if (window.indexedDB.databases) {
+          const databases = await window.indexedDB.databases();
+          databases.forEach((db) => {
+            if (db.name) {
+              const req = window.indexedDB.deleteDatabase(db.name);
+              req.onerror = (event) => {
+                Logger.error(`Error while deleting database in loop ${db.name}:`+ event);
+              };
+              req.onsuccess = () => {
+                Logger.info(`Database ${db.name} deleted.`);
+              };
+            }
+          });
+        } else {
+          const dbName = "customer_cards_db";
+          const req = window.indexedDB.deleteDatabase(dbName);
+          req.onerror = (event) => {
+            Logger.error(`Error while deleting database by name ${dbName}:`+ event);
+          };
+          req.onsuccess = () => {
+            Logger.info(`Database ${dbName} deleted.`);
+          };
+        }
+      }
       alert(t("settings_Dialog_DeleteAllSuccessful"));
     }
-  }; 
-
+  };
+  
   return (
       <ViewInfo
         onDatenschutzClick={handleDatenschutzClick}

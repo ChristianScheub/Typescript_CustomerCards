@@ -5,12 +5,14 @@ import { CustomerCard } from "../services/SQLiteService/types/CustomerCard";
 import { CodeType } from "../services/SQLiteService/types/CodeType";
 import { BarcodeType } from "../types/BarcodeTypes";
 import Logger from "../services/Logger/logger";
+import { useNavigate } from "react-router-dom";
 
 const NewCardContainer: React.FC = () => {
   const [scannerType, setScannerType] = useState<CodeType.QR_CODE | CodeType.BARCODE | CodeType.NULL >(CodeType.NULL );
   const [scannedCode, setScannedCode] = useState<string | null>(null);
   const [shopName, setShopName] = useState<string>("");
   const [barcodeFormat, setBarcodeFormat] = useState<BarcodeType>(BarcodeType.CODE128 );
+  const navigate = useNavigate();
 
 
   const handleShopNameChange = (
@@ -55,6 +57,7 @@ const NewCardContainer: React.FC = () => {
         setShopName("");
 
         alert("Kundenkarte erfolgreich hinzugefügt!");
+        navigate("/");
       } catch (error) {
         console.error("Fehler beim Speichern der Karte:", error);
         alert("Fehler beim Speichern der Karte.");

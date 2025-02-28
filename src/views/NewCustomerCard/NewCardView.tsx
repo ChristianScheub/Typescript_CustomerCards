@@ -6,6 +6,7 @@ import MaterialInput from "../../ui/MaterialInput";
 import FloatingBtn, { ButtonAlignment } from "../../ui/floatingBtn/floatingBtn";
 import { FaRegSave } from "react-icons/fa";
 import { BarcodeType } from "../../types/BarcodeTypes";
+import { featureFlag_Debug_View } from "../../config/featureFlags";
 
 interface NewCardViewProps {
   scannerType: CodeType;
@@ -54,9 +55,10 @@ const NewCardView: React.FC<NewCardViewProps> = ({
             <BarcodeScannerComponent onScan={onScan} />
           )}
         </div>
+      
 
         <div>{scannedCode && <p>Gescannt: {scannedCode}</p>}</div>
-        <div>{barcodeFormat && <p>Format: {barcodeFormat}</p>}</div>
+        <div>{featureFlag_Debug_View && barcodeFormat && <p>Format: {barcodeFormat}</p>}</div>
       </Card>
       <FloatingBtn
         alignment={ButtonAlignment.RIGHT}

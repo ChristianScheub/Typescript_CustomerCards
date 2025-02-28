@@ -34,6 +34,7 @@ const NavBarView: React.FC<NavBarViewProps> = ({
     <Navbar
       variant="dark"
       className="navbarElement width100 justify-content-between backgroundColorNotFocused shadow"
+      style={{paddingTop: "9vw"}}
     >
       <Container className="navbarContainer">
         {showBackButton ? (

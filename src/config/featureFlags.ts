@@ -1,4 +1,4 @@
-const featureFlag_Debug_View: boolean = false; //Show some dev things in the view
+const featureFlag_Debug_View: boolean = true; //Show some dev things in the view
 const featureFlag_Debug_Settings_View: boolean = true; //Show dev settings things in the view
 
 const featureFlag_Debug_StoreLogs: boolean = false; //Store logs in the local storage

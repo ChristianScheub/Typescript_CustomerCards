@@ -20,7 +20,6 @@ export const BarcodeScannerComponent: React.FC<BarcodeScannerProps> = ({ onScan 
     QR_CODE: BarcodeType.QRCode,
   };
 
-  // Anfrage der Kameraberechtigung
   const requestPermissions = async (): Promise<boolean> => {
     try {
       const { camera } = await BarcodeScanner.requestPermissions();
@@ -31,7 +30,6 @@ export const BarcodeScannerComponent: React.FC<BarcodeScannerProps> = ({ onScan 
     }
   };
 
-  // Alert anzeigen, wenn keine Berechtigung erteilt wurde
   const presentAlert = async () => {
     window.alert(
       t("barcodeScanner_permissionDenied") ||
