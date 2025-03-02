@@ -9,6 +9,7 @@ import { BarcodeType } from "../../types/BarcodeTypes";
 import BarcodeGeneratorContainer from "../../container/GeneratorBarcodeContainer";
 import QRCodeGeneratorContainer from "../../container/GeneratorQRCodeContainer";
 import { featureFlag_Debug_View } from "../../config/featureFlags";
+import { formatDateInEU } from "../../services/helper/currentDateUtils";
 
 interface CustomerCardViewProps {
   cards: CustomerCard[];
@@ -29,27 +30,33 @@ const CustomerCardView: React.FC<CustomerCardViewProps> = ({
             className="customer-card backgroundColorHighlight"
           >
             <h2>{card.shopName}</h2>
-            <p>Erstellt am: {new Date(card.createdAt).toLocaleDateString()}</p>
+            <p>
+              Erstellt am:{" "}
+              {formatDateInEU(card.createdAt.toString())}
+            </p>
 
-            {featureFlag_Debug_View && <p>Code Typ (obsoleted): {card.codeType}</p>}
-            {featureFlag_Debug_View && <p>Encoding: {card.barcodeEncoding}</p>}
-
-            {card.barcodeEncoding === BarcodeType.QRCode ? (
-              <QRCodeGeneratorContainer
-                value={card.cardContent}
-                size={128}
-                color="#000000"
-              />
-            ) : (
-              <BarcodeGeneratorContainer
-                value={card.cardContent}
-                type={card.barcodeEncoding}
-                width={2}
-                height={100}
-                color="#000000"
-              />
+            {featureFlag_Debug_View && (
+              <p>Code Typ (obsoleted): {card.codeType}</p>
             )}
-            <p>{card.cardContent}</p>
+            {featureFlag_Debug_View && <p>Encoding: {card.barcodeEncoding}</p>}
+            <center>
+              {card.barcodeEncoding === BarcodeType.QRCode ? (
+                <QRCodeGeneratorContainer
+                  value={card.cardContent}
+                  size={128}
+                  color="#000000"
+                />
+              ) : (
+                <BarcodeGeneratorContainer
+                  value={card.cardContent}
+                  type={card.barcodeEncoding}
+                  width={3}
+                  height={100}
+                  color="#000000"
+                />
+              )}
+              <p>{card.cardContent}</p>
+            </center>
           </Card>
         ))}
       </div>

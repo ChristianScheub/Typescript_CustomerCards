@@ -15,6 +15,7 @@ interface NewCardViewProps {
   barcodeFormat: string;
   onSelectScanner: (type: CodeType) => void;
   onScan: (data: string | null, format: BarcodeType) => void;
+  onScannedCode: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onAddCard: () => void;
   onShopNameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -26,6 +27,7 @@ const NewCardView: React.FC<NewCardViewProps> = ({
   barcodeFormat,
   onSelectScanner,
   onScan,
+  onScannedCode,
   onAddCard,
   onShopNameChange,
 }) => {
@@ -55,7 +57,13 @@ const NewCardView: React.FC<NewCardViewProps> = ({
             <BarcodeScannerComponent onScan={onScan} />
           )}
         </div>
-      
+        <div>{featureFlag_Debug_View && barcodeFormat && <MaterialInput
+            value={scannedCode}
+            onChange={(e) => onScannedCode(e)}
+            type="text"
+            label="Barcode Name"
+          />}</div>
+
 
         <div>{scannedCode && <p>Gescannt: {scannedCode}</p>}</div>
         <div>{featureFlag_Debug_View && barcodeFormat && <p>Format: {barcodeFormat}</p>}</div>

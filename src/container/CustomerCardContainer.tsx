@@ -5,7 +5,11 @@ import CustomerCardView from "../views/CustomerCardView/CustomerCardView";
 import Logger from "../services/Logger/logger";
 import { useNavigate } from "react-router-dom";
 
-const CustomerCardContainer: React.FC = () => {
+interface CustomerCardContainerProps {
+  searchQuery: string;
+}
+
+const CustomerCardContainer: React.FC<CustomerCardContainerProps> = ({ searchQuery }) => {
   const [cards, setCards] = useState<CustomerCard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -22,7 +26,7 @@ const CustomerCardContainer: React.FC = () => {
     const loadCards = async () => {
       try {
         await sqliteService.initialize();
-        const cards = await sqliteService.getCards();
+        const cards = await sqliteService.getFilteredCards(searchQuery);
         setCards(cards);
       } catch (err) {
         setError("Fehler beim Laden der Kundenkarten.");
@@ -33,7 +37,7 @@ const CustomerCardContainer: React.FC = () => {
     };
 
     loadCards();
-  }, []);
+  }, [searchQuery]);
 
   if (isLoading) {
     return <div>Lade Kundenkarten...</div>;

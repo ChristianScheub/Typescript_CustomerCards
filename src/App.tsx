@@ -13,9 +13,8 @@ import NewCardContainer from "./container/NewCardContainer";
 import ContainerInfo from "./container/InfoContainer";
 
 const App: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState<string>("");
   const theme = useDarkMode();
-  console.log(searchQuery);
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   return (
     <div className={theme}>
@@ -36,7 +35,7 @@ const App: React.FC = () => {
               <Route path="newCard" element={<NewCardContainer />} />
               <Route path="/settings" element={<ContainerInfo />} />
 
-              <Route path="/" element={<CustomerCardContainer />} />
+              <Route path="/" element={<CustomerCardContainer  searchQuery={searchQuery}/>} />
             </Routes>
           </BrowserRouter>
       </div>

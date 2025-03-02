@@ -25,6 +25,16 @@ const NewCardContainer: React.FC = () => {
 
   };
 
+  const handleChangeScanCode = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    Logger.info(
+      "Scanned Code was set to: " + event.target.value
+    );
+   setScannedCode(event.target.value);
+
+  };
+
 
   // Callback für beide Scanner, der den gescannten Code anzeigt
   const handleScan = (data: string | null,format: BarcodeType) => {
@@ -77,6 +87,7 @@ const NewCardContainer: React.FC = () => {
       barcodeFormat={barcodeFormat}
       onSelectScanner={setScannerType}
       onScan={handleScan}
+      onScannedCode={handleChangeScanCode}
       onAddCard={handleAddCard}
       onShopNameChange={handleShopNameChange}
     />
