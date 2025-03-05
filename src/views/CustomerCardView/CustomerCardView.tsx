@@ -1,24 +1,22 @@
-// src/components/CustomerCardView.tsx
 import React from "react";
 import "./CustomerCardView.css";
 import Card from "../../ui/Card/Card";
 import { CustomerCard } from "../../services/SQLiteService/types/CustomerCard";
 import FloatingBtn, { ButtonAlignment } from "../../ui/floatingBtn/floatingBtn";
 import { IoAddOutline } from "react-icons/io5";
-import { BarcodeType } from "../../types/BarcodeTypes";
-import BarcodeGeneratorContainer from "../../container/GeneratorBarcodeContainer";
-import QRCodeGeneratorContainer from "../../container/GeneratorQRCodeContainer";
-import { featureFlag_Debug_View } from "../../config/featureFlags";
-import { formatDateInEU } from "../../services/helper/currentDateUtils";
 
 interface CustomerCardViewProps {
   cards: CustomerCard[];
   openAddNewCard: () => void;
+  calculateFontSize: (text: string) => string;
+  openPopup: (card: CustomerCard) => void;
 }
 
 const CustomerCardView: React.FC<CustomerCardViewProps> = ({
   cards,
   openAddNewCard,
+  calculateFontSize,
+  openPopup,
 }) => {
   return (
     <div className="customer-card-view">
@@ -28,35 +26,13 @@ const CustomerCardView: React.FC<CustomerCardViewProps> = ({
           <Card
             key={card.id}
             className="customer-card backgroundColorHighlight"
+            onClick={() => openPopup(card)}
           >
-            <h2>{card.shopName}</h2>
-            <p>
-              Erstellt am:{" "}
-              {formatDateInEU(card.createdAt.toString())}
-            </p>
-
-            {featureFlag_Debug_View && (
-              <p>Code Typ (obsoleted): {card.codeType}</p>
-            )}
-            {featureFlag_Debug_View && <p>Encoding: {card.barcodeEncoding}</p>}
-            <center>
-              {card.barcodeEncoding === BarcodeType.QRCode ? (
-                <QRCodeGeneratorContainer
-                  value={card.cardContent}
-                  size={128}
-                  color="#000000"
-                />
-              ) : (
-                <BarcodeGeneratorContainer
-                  value={card.cardContent}
-                  type={card.barcodeEncoding}
-                  width={3}
-                  height={100}
-                  color="#000000"
-                />
-              )}
-              <p>{card.cardContent}</p>
-            </center>
+            <div>
+              <h3 style={{ fontSize: calculateFontSize(card.shopName) }}>
+                {card.shopName}
+              </h3>
+            </div>
           </Card>
         ))}
       </div>

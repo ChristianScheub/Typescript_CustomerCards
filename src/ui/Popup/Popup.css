@@ -9,12 +9,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9001; /* Stellt sicher, dass das Popup über allem liegt */
+    z-index: 99; /* Stellt sicher, dass das Popup über allem liegt */
+    
   }
   
   /* Popup-Container */
   .popup-container {
     padding: 20px;
+    overflow-x: hidden;
+    background: #fff;
     border-radius: 10px;
     width: 90%;
     max-width: 500px; /* Maximalbreite für das Popup */
@@ -42,5 +45,6 @@
     margin-top: 40px; /* Platz über dem Schließen-Button */
     max-height: 80vh; /* Maximale Höhe, um den Inhalt scrollbar zu machen */
     overflow-y: auto;
+    overflow-x: hidden;
   }
   

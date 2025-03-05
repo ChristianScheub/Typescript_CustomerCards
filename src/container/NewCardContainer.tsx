@@ -5,69 +5,54 @@ import { CustomerCard } from "../services/SQLiteService/types/CustomerCard";
 import { CodeType } from "../services/SQLiteService/types/CodeType";
 import { BarcodeType } from "../types/BarcodeTypes";
 import Logger from "../services/Logger/logger";
-import { useNavigate } from "react-router-dom";
 
-const NewCardContainer: React.FC = () => {
-  const [scannerType, setScannerType] = useState<CodeType.QR_CODE | CodeType.BARCODE | CodeType.NULL >(CodeType.NULL );
+interface NewCardContainerProps {
+  isPopupOpen: boolean;
+  closeAddNewCard: () => void;
+}
+
+const NewCardContainer: React.FC<NewCardContainerProps> = ({ isPopupOpen, closeAddNewCard }) => {
+  
+  const [scannerType, setScannerType] = useState<CodeType.QR_CODE | CodeType.BARCODE | CodeType.NULL >(CodeType.NULL);
   const [scannedCode, setScannedCode] = useState<string | null>(null);
   const [shopName, setShopName] = useState<string>("");
-  const [barcodeFormat, setBarcodeFormat] = useState<BarcodeType>(BarcodeType.CODE128 );
-  const navigate = useNavigate();
+  const [barcodeFormat, setBarcodeFormat] = useState<BarcodeType>(BarcodeType.CODE128);
 
-
-  const handleShopNameChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    Logger.info(
-      "Shop Name was set to: " + event.target.value
-    );
-   setShopName(event.target.value);
-
+  const handleShopNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    Logger.info("Shop Name was set to: " + event.target.value);
+    setShopName(event.target.value);
   };
 
-  const handleChangeScanCode = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    Logger.info(
-      "Scanned Code was set to: " + event.target.value
-    );
-   setScannedCode(event.target.value);
-
+  const handleChangeScanCode = (event: React.ChangeEvent<HTMLInputElement>) => {
+    Logger.info("Scanned Code was set to: " + event.target.value);
+    setScannedCode(event.target.value);
   };
 
-
-  // Callback für beide Scanner, der den gescannten Code anzeigt
-  const handleScan = (data: string | null,format: BarcodeType) => {
+  const handleScan = (data: string | null, format: BarcodeType) => {
     setScannedCode(data);
     setBarcodeFormat(format);
     setScannerType(CodeType.NULL);
   };
 
-  // Funktion zum Hinzufügen der Kundenkarte
   const handleAddCard = async () => {
-    // Zusätzlich prüfen wir, dass scannerType nicht null ist
     if (scannedCode && shopName && scannerType) {
       try {
-        // Erstelle ein neues Kartenobjekt mit Omit, sodass id, createdAt und updatedAt
-        // automatisch generiert werden
         const newCard: Omit<CustomerCard, "id" | "createdAt" | "updatedAt"> = {
           shopName,
           cardContent: scannedCode,
           codeType: scannerType,
-          barcodeEncoding: barcodeFormat
+          barcodeEncoding: barcodeFormat,
         };
 
-        // Speichere die Karte in der Datenbank
         const savedCard = await sqliteService.saveCard(newCard);
         console.log("Kundenkarte gespeichert:", savedCard);
 
-        // Zurücksetzen des Zustands
         setScannerType(CodeType.NULL);
         setScannedCode(null);
         setShopName("");
 
         alert("Kundenkarte erfolgreich hinzugefügt!");
-        navigate("/");
+        closeAddNewCard();
       } catch (error) {
         console.error("Fehler beim Speichern der Karte:", error);
         alert("Fehler beim Speichern der Karte.");
@@ -76,8 +61,6 @@ const NewCardContainer: React.FC = () => {
       alert("Bitte geben Sie einen Shop-Namen ein, wählen Sie einen Scanner-Typ aus und scannen Sie einen Code.");
     }
   };
-
-  
 
   return (
     <NewCardView
@@ -90,6 +73,8 @@ const NewCardContainer: React.FC = () => {
       onScannedCode={handleChangeScanCode}
       onAddCard={handleAddCard}
       onShopNameChange={handleShopNameChange}
+      isPopupOpen={isPopupOpen}
+      closePopup={closeAddNewCard}
     />
   );
 };

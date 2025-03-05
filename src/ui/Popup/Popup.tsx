@@ -4,22 +4,22 @@ import './Popup.css';
 interface PopupProps {
   onClose: () => void;
   content: React.ReactNode;
+  className?: string;
 }
 
-export const Popup: React.FC<PopupProps> = ({ onClose, content }) => {
-  // Handler for overlay click (closes popup)
+export const Popup: React.FC<PopupProps> = ({ onClose, content, className }) => {
+
   const handleOverlayClick = () => {
     onClose();
   };
 
-  // Handler for content click (prevents closing)
   const handleContentClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.stopPropagation();
   };
 
   return (
     <div className="popup-overlay" onClick={handleOverlayClick}>
-      <div className="popup-container adjustmentTextColor" onClick={handleContentClick}>
+      <div className={`popup-container adjustmentTextColor ${className || ''}`} onClick={handleContentClick}>
         <button className="popup-close" onClick={onClose}>
           x
         </button>

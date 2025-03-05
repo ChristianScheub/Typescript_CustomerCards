@@ -9,7 +9,6 @@ import "./darkModeLightMode.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CustomerCardContainer from "./container/CustomerCardContainer";
-import NewCardContainer from "./container/NewCardContainer";
 import ContainerInfo from "./container/InfoContainer";
 
 const App: React.FC = () => {
@@ -19,7 +18,7 @@ const App: React.FC = () => {
   return (
     <div className={theme}>
       <div
-        className=" backgroundColor"
+        className="backgroundColor"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -32,7 +31,6 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/datenschutz" element={<Datenschutz />} />
               <Route path="/impressum" element={<Impressum />} />
-              <Route path="newCard" element={<NewCardContainer />} />
               <Route path="/settings" element={<ContainerInfo />} />
 
               <Route path="/" element={<CustomerCardContainer  searchQuery={searchQuery}/>} />

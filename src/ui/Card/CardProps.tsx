@@ -4,4 +4,5 @@ export interface CardProps {
     children: ReactNode;
     style?: CSSProperties;
     className?: string;
+    onClick?: () => void;
   }
