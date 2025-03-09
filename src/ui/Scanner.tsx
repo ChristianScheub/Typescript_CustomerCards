@@ -4,11 +4,11 @@ import Logger from "../services/Logger/logger";
 import { BarcodeType } from "../types/BarcodeTypes";
 import { Barcode, BarcodeScanner } from '@capacitor-mlkit/barcode-scanning';
 
-interface BarcodeScannerProps {
+interface ScannerProps {
   onScan: (data: string | null, format: BarcodeType) => void;
 }
 
-export const BarcodeScannerComponent: React.FC<BarcodeScannerProps> = ({ onScan }) => {
+export const ScannerComponent: React.FC<ScannerProps> = ({ onScan }) => {
   const { t } = useTranslation();
 
   // Mapping von ML Kit Format-Strings auf den internen BarcodeType

@@ -1,4 +1,4 @@
-import { CustomerCard } from "./types/CustomerCard";
+import { CustomerCard } from "../../types/CustomerCard";
 
 export interface ISQLiteService {
   /**

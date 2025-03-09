@@ -6,7 +6,6 @@ interface ColorPickerProps {
 
 const ColorPicker: React.FC<ColorPickerProps> = ({ onColorSelect }) => {
   const colors = ["#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"];
-  
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
 
   const handleColorSelect = (color: string) => {
@@ -26,7 +25,7 @@ const ColorPicker: React.FC<ColorPickerProps> = ({ onColorSelect }) => {
       }}
     >
       {colors.map((color) => (
-        <div
+        <button
           key={color}
           onClick={() => handleColorSelect(color)}
           style={{
@@ -35,16 +34,15 @@ const ColorPicker: React.FC<ColorPickerProps> = ({ onColorSelect }) => {
             borderRadius: "50%",
             backgroundColor: color,
             cursor: "pointer",
-            border: selectedColor === color ? "3px solid #000" : "1px solid #ccc",
+            border:
+              selectedColor === color ? "3px solid #000" : "1px solid #ccc",
             transition: "transform 0.2s ease, border 0.2s ease",
+            padding: 0,
+            outline: "none",
+            boxSizing: "border-box",
           }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.transform = "scale(1.2)")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.transform = "scale(1)")
-          }
           title={`Farbe: ${color}`}
+          aria-label={`Farbe ${color} auswählen`}
         />
       ))}
     </div>

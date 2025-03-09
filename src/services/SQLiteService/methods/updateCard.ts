@@ -1,5 +1,5 @@
 import Logger from "../../Logger/logger";
-import { CustomerCard } from "../types/CustomerCard";
+import { CustomerCard } from "../../../types/CustomerCard";
 import { getDbConnection } from "./dbConnection";
 
 export const updateCard = async (

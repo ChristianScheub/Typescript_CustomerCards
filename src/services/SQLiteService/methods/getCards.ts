@@ -1,5 +1,5 @@
+import { CustomerCard } from "../../../types/CustomerCard";
 import Logger from "../../Logger/logger";
-import { CustomerCard } from "../types/CustomerCard";
 import { getDbConnection } from "./dbConnection";
 import { handleIndexedDBError } from "./handleError";
 

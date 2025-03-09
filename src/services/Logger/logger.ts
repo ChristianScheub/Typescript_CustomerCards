@@ -11,8 +11,8 @@ import {
 import { handleLogDownload } from "./downloadFile";
 
 class Logger {
-  private static isMobile: boolean = Capacitor.getPlatform() === "ios" || Capacitor.getPlatform() === "android";
-  private static logKey: string = "app_logs";
+  private static readonly isMobile: boolean = Capacitor.getPlatform() === "ios" || Capacitor.getPlatform() === "android";
+  private static readonly logKey: string = "app_logs";
 
   private static getCallerFunctionName(): string {
     const stack = new Error().stack;

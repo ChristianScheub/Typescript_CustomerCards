@@ -2,10 +2,10 @@ import React from "react";
 import QRCodeGeneratorContainer from "../../container/GeneratorQRCodeContainer";
 import BarcodeGeneratorContainer from "../../container/GeneratorBarcodeContainer";
 import { BarcodeType } from "../../types/BarcodeTypes";
-import { CustomerCard } from "../../services/SQLiteService/types/CustomerCard";
 import { FaTrash } from "react-icons/fa";
 import Popup from "../../ui/Popup/Popup";
 import FloatingBtn, { ButtonAlignment } from "../../ui/floatingBtn/floatingBtn";
+import { CustomerCard } from "../../types/CustomerCard";
 
 interface CustomerCardFocusViewProps {
   card: CustomerCard;

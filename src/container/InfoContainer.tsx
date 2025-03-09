@@ -56,8 +56,8 @@ const ContainerInfo: React.FC = () => {
             if (db.name) {
               const req = window.indexedDB.deleteDatabase(db.name);
               req.onerror = (event) => {
-                Logger.error(`Error while deleting database in loop ${db.name}:`+ event);
-              };
+                Logger.error(`Error while deleting database in loop ${db.name}: ${JSON.stringify(event)}`);
+              };              
               req.onsuccess = () => {
                 Logger.info(`Database ${db.name} deleted.`);
               };
@@ -67,7 +67,7 @@ const ContainerInfo: React.FC = () => {
           const dbName = "customer_cards_db";
           const req = window.indexedDB.deleteDatabase(dbName);
           req.onerror = (event) => {
-            Logger.error(`Error while deleting database by name ${dbName}:`+ event);
+            Logger.error(`Error while deleting database by name ${dbName}: ${JSON.stringify(event)}`);
           };
           req.onsuccess = () => {
             Logger.info(`Database ${dbName} deleted.`);

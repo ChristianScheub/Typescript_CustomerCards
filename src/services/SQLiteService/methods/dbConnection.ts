@@ -1,5 +1,6 @@
 import Logger from "../../Logger/logger";
 import { DB_NAME, STORE_NAME } from "../configDB";
+import { handleIndexedDBError } from "./handleError";
 
 export const getDbConnection = async (): Promise<IDBDatabase> => {
   return new Promise((resolve, reject) => {
@@ -19,9 +20,8 @@ export const getDbConnection = async (): Promise<IDBDatabase> => {
       resolve(db);
     };
 
-    request.onerror = () => {
-      Logger.error("Fehler beim Initialisieren der Datenbank."+ request.error);
-      reject(request.error);
+    request.onerror = (event) => {
+      handleIndexedDBError(reject, event);
     };
   });
 };

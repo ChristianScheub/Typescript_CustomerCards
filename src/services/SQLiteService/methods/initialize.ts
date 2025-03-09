@@ -17,8 +17,7 @@ export const initialize = async (): Promise<void> => {
     };
 
     request.onsuccess = () => {
-      request.result;
-      Logger.infoService("Datenbank erfolgreich initialisiert.");
+      Logger.infoService("Datenbank erfolgreich initialisiert."+request.result);
       resolve();
     };
 

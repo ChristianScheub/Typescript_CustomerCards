@@ -1,10 +1,10 @@
 import React from "react";
 import "./CustomerCardView.css";
 import Card from "../../ui/Card/Card";
-import { CustomerCard } from "../../services/SQLiteService/types/CustomerCard";
 import FloatingBtn, { ButtonAlignment } from "../../ui/floatingBtn/floatingBtn";
 import { IoAddOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
+import { CustomerCard } from "../../types/CustomerCard";
 
 interface CustomerCardViewProps {
   cards: CustomerCard[];

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import sqliteService from "../services/SQLiteService";
-import { CustomerCard } from "../services/SQLiteService/types/CustomerCard";
 import CustomerCardView from "../views/CustomerCardView/CustomerCardView";
 import Logger from "../services/Logger/logger";
 import NewCardContainer from "./NewCardContainer";
 import CustomerCardFocusView from "../views/CustomerCardView/CustomerCardFocusView";
+import { CustomerCard } from "../types/CustomerCard";
 
 interface CustomerCardContainerProps {
   searchQuery: string;
@@ -92,7 +92,7 @@ const CustomerCardContainer: React.FC<CustomerCardContainerProps> = ({
         openPopup={openPopup}
         calculateFontSize={calculateFontSize}
       />
-      
+
       {isPopupFocusCardOpen && selectedCard && (
         <CustomerCardFocusView
           card={selectedCard}

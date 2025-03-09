@@ -1,6 +1,5 @@
 import React from "react";
-import { BarcodeScannerComponent } from "../../ui/BarcodeScanner";
-import { CodeType } from "../../services/SQLiteService/types/CodeType";
+import { ScannerComponent } from "../../ui/Scanner";
 import MaterialInput from "../../ui/MaterialInput";
 import FloatingBtn, { ButtonAlignment } from "../../ui/floatingBtn/floatingBtn";
 import { FaRegSave } from "react-icons/fa";
@@ -14,14 +13,14 @@ import ColorPicker from "../../ui/ColorPicker";
 import { useTranslation } from "react-i18next";
 
 interface NewCardViewProps {
-  scannerType: CodeType;
+  scannerActive: boolean;
   scannedCode: string | null;
   shopName: string;
   barcodeFormat: string;
   isPopupOpen: boolean;
   color: string;
   closePopup: () => void;
-  onSelectScanner: (type: CodeType) => void;
+  onSetScannerActive: (active: boolean) => void;
   onScan: (data: string | null, format: BarcodeType) => void;
   onScannedCode: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onAddCard: () => void;
@@ -30,14 +29,14 @@ interface NewCardViewProps {
 }
 
 const NewCardView: React.FC<NewCardViewProps> = ({
-  scannerType,
+  scannerActive,
   scannedCode,
   shopName,
   barcodeFormat,
   isPopupOpen,
   color,
   closePopup,
-  onSelectScanner,
+  onSetScannerActive,
   onScan,
   onScannedCode,
   onAddCard,
@@ -78,7 +77,7 @@ const NewCardView: React.FC<NewCardViewProps> = ({
                 <ColorPicker onColorSelect={handleColorChange} />
               </div>
               <center>
-                <div>{scannedCode && <b>{t("newCard_scannedSuccessfully")} {scannedCode}!</b>}</div>
+                <div style={{ color: "white" }}>{scannedCode && <b>{t("newCard_scannedSuccessfully")} {scannedCode}</b>}</div>
               </center>
 
               <div>
@@ -89,7 +88,7 @@ const NewCardView: React.FC<NewCardViewProps> = ({
                         <Button
                           style={{ width: "30vw", border: "0" }}
                           className="backgroundColorNotFocused"
-                          onClick={() => onSelectScanner(CodeType.BARCODE)}
+                          onClick={() => onSetScannerActive(true)}
                         >
                           <CiCamera size="10vw" />
                         </Button>
@@ -103,8 +102,8 @@ const NewCardView: React.FC<NewCardViewProps> = ({
               </div>
 
               <div>
-                {scannerType === CodeType.BARCODE && (
-                  <BarcodeScannerComponent onScan={onScan} />
+                {scannerActive && (
+                  <ScannerComponent onScan={onScan} />
                 )}
               </div>
 

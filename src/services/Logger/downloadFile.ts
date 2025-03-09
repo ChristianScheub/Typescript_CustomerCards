@@ -6,7 +6,6 @@ export const handleLogDownload = async (logs: string) => {
   try {
     const fileName = generateFileName();
     Logger.error("File Name generated: " + fileName);
-    //const encodedLogs = utf8Encode(logs);
     const base64Data = btoa(logs);
 
     await Filesystem.writeFile({
