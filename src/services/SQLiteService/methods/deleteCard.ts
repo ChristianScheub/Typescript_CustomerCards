@@ -1,6 +1,7 @@
 import Logger from "../../Logger/logger";
 import { STORE_NAME } from "../configDB";
 import { getDbConnection } from "./dbConnection";
+import { handleIndexedDBError } from "./handleError";
 
 export const deleteCard = async (cardId: string): Promise<void> => {
   const db = await getDbConnection();
@@ -13,6 +14,8 @@ export const deleteCard = async (cardId: string): Promise<void> => {
     const request = store.delete(cardId);
 
     request.onsuccess = () => resolve();
-    request.onerror = () => reject(request.error);
+    request.onerror = (event) => {
+      handleIndexedDBError(reject, event);
+    };
   });
 };

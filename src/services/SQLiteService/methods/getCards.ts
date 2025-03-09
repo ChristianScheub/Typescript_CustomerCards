@@ -1,6 +1,7 @@
 import Logger from "../../Logger/logger";
 import { CustomerCard } from "../types/CustomerCard";
 import { getDbConnection } from "./dbConnection";
+import { handleIndexedDBError } from "./handleError";
 
 export const getCards = async (): Promise<CustomerCard[]> => {
   const db = await getDbConnection();
@@ -16,8 +17,7 @@ export const getCards = async (): Promise<CustomerCard[]> => {
     };
 
     request.onerror = (event) => {
-      const error = (event.target as IDBRequest).error;
-      reject(error);
+      handleIndexedDBError(reject, event);
     };
   });
 };
@@ -40,8 +40,7 @@ export const getFilteredCards = async (searchQuery: string): Promise<CustomerCar
     };
 
     request.onerror = (event) => {
-      const error = (event.target as IDBRequest).error;
-      reject(error);
+      handleIndexedDBError(reject, event);
     };
   });
 };

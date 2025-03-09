@@ -1,4 +1,5 @@
 import Logger from "../../Logger/logger";
+import { handleIndexedDBError } from "./handleError";
 
 const DB_NAME = "customer_cards_db";
 const STORE_NAME = "customer_cards";
@@ -21,9 +22,8 @@ export const initialize = async (): Promise<void> => {
       resolve();
     };
 
-    request.onerror = () => {
-      Logger.error("Fehler beim Initialisieren der Datenbank."+ request.error);
-      reject(request.error);
+    request.onerror = (event) => {
+      handleIndexedDBError(reject, event);
     };
   });
 };

@@ -1,6 +1,7 @@
 import Logger from "../../Logger/logger";
 import { CustomerCard } from "../types/CustomerCard";
 import { getDbConnection } from "./dbConnection";
+import { handleIndexedDBError } from "./handleError";
 
 export const saveCard = async (
   card: Omit<CustomerCard, "id" | "createdAt" | "updatedAt">
@@ -32,9 +33,7 @@ export const saveCard = async (
     };
 
     request.onerror = (event) => {
-      const error = (event.target as IDBRequest).error;
-      Logger.error("Error saving card:"+ error);
-      reject(error);
+      handleIndexedDBError(reject, event);
     };
   });
 };
