@@ -1,14 +1,15 @@
 import { AdMob, BannerAdOptions, BannerAdSize, BannerAdPosition } from '@capacitor-community/admob';
 import { Capacitor } from "@capacitor/core";
+import { config } from './config';
 
   const showBanner = async () => {
     let adId: string;
     if (Capacitor.getPlatform() === 'android') {
-      adId = 'ca-app-pub-6250689577715326/8439901875';
+      adId = config.banner.android;
     } else if (Capacitor.getPlatform() === 'ios') {
-      adId = 'ca-app-pub-6250689577715326/6479775339';
+      adId = config.banner.ios;
     } else {
-      adId = 'ca-app-pub-6250689577715326/8439901875';
+      adId = config.banner.android;
     }
 
     const options: BannerAdOptions = {

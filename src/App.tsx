@@ -10,11 +10,14 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CustomerCardContainer from "./container/CustomerCardContainer";
 import ContainerInfo from "./container/InfoContainer";
+import { AdManager } from "./services/Ads/AdManager";
+import { makeStatusBarTransparent } from "./services/helper/statusBarUtils";
 
 const App: React.FC = () => {
   const theme = useDarkMode();
   const [searchQuery, setSearchQuery] = useState<string>("");
-
+  makeStatusBarTransparent();
+  
   return (
     <div className={theme}>
       <div
@@ -25,6 +28,7 @@ const App: React.FC = () => {
           minHeight: "100vh"
         }}
       >
+        <AdManager />
           <BrowserRouter>
             <NavBarContainer setSearchQuery={setSearchQuery} />
 

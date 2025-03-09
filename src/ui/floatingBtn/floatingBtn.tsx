@@ -25,7 +25,7 @@ const FloatingBtn: React.FC<FloatingBtnProps> = ({ alignment, icon, onClick, ari
     case ButtonAlignment.LEFT:
       positionStyle = {
         position: "fixed",
-        bottom: "10vw",
+        bottom: "15vw",
         left: "0rem",
         transform: "translate(50%, -50%)",
         zIndex: 100,
@@ -34,7 +34,7 @@ const FloatingBtn: React.FC<FloatingBtnProps> = ({ alignment, icon, onClick, ari
     case ButtonAlignment.CENTER:
       positionStyle = {
         position: "fixed",
-        bottom: "10vw",
+        bottom: "15vw",
         left: "50%",
         transform: "translate(-50%, -50%)",
         zIndex: 100,
@@ -43,7 +43,7 @@ const FloatingBtn: React.FC<FloatingBtnProps> = ({ alignment, icon, onClick, ari
     case ButtonAlignment.RIGHT:
       positionStyle = {
         position: "fixed",
-        bottom: "10vw",
+        bottom: "15vw",
         right: "0rem",
         transform: "translate(-50%, -50%)",
         zIndex: 100,
@@ -57,7 +57,7 @@ const FloatingBtn: React.FC<FloatingBtnProps> = ({ alignment, icon, onClick, ari
         style={{
           height: "4rem",
           width: "4rem",
-          borderColor: "#0a58ca",
+          borderColor: "#3d6868",
           borderRadius: '50%',
         }}
         className="backgroundColorHighlight shadow"

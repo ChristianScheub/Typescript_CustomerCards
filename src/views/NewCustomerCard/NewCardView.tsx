@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BarcodeScannerComponent } from "../../ui/BarcodeScanner";
 import { CodeType } from "../../services/SQLiteService/types/CodeType";
 import MaterialInput from "../../ui/MaterialInput";
@@ -9,8 +9,9 @@ import { featureFlag_Debug_View } from "../../config/featureFlags";
 import FileUploadScanner from "../../ui/FileUpload";
 import Button from "react-bootstrap/Button";
 import { CiCamera } from "react-icons/ci";
-import { FaRegFileImage } from "react-icons/fa6";
 import Popup from "../../ui/Popup/Popup";
+import ColorPicker from "../../ui/ColorPicker";
+import { useTranslation } from "react-i18next";
 
 interface NewCardViewProps {
   scannerType: CodeType;
@@ -18,11 +19,13 @@ interface NewCardViewProps {
   shopName: string;
   barcodeFormat: string;
   isPopupOpen: boolean;
+  color: string;
   closePopup: () => void;
   onSelectScanner: (type: CodeType) => void;
   onScan: (data: string | null, format: BarcodeType) => void;
   onScannedCode: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onAddCard: () => void;
+  onColorChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onShopNameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -32,14 +35,23 @@ const NewCardView: React.FC<NewCardViewProps> = ({
   shopName,
   barcodeFormat,
   isPopupOpen,
+  color,
   closePopup,
   onSelectScanner,
   onScan,
   onScannedCode,
   onAddCard,
+  onColorChange,
   onShopNameChange,
 }) => {
-  const [showFileUpload, setShowFileUpload] = useState(false);
+  const handleColorChange = (selectedColor: string) => {
+    const syntheticEvent = {
+      target: { value: selectedColor },
+    } as React.ChangeEvent<HTMLInputElement>;
+    onColorChange(syntheticEvent);
+  };
+  const { t } = useTranslation();
+
 
   return (
     <div>
@@ -49,18 +61,25 @@ const NewCardView: React.FC<NewCardViewProps> = ({
           className="newCustomerCard backgroundColorHighlight"
           content={
             <div>
-              <h1 style={{ color: "white" }}>Scanner Auswahl</h1>
+              <h1 style={{ color: "white" }}>{t("newCard_Title")}</h1>
 
               <div>
                 <MaterialInput
                   value={shopName}
                   onChange={(e) => onShopNameChange(e)}
                   type="text"
-                  label="Geben Sie den Shop-Namen ein"
+                  label={t("newCard_shopForm")}
                   inWhite={true}
                 />
               </div>
               <br />
+              <div>
+                <h3 style={{ color: "white" }}>{t("newCard_selectColor")}</h3>
+                <ColorPicker onColorSelect={handleColorChange} />
+              </div>
+              <center>
+                <div>{scannedCode && <b>{t("newCard_scannedSuccessfully")} {scannedCode}!</b>}</div>
+              </center>
 
               <div>
                 <table style={{ width: "100%" }}>
@@ -76,13 +95,7 @@ const NewCardView: React.FC<NewCardViewProps> = ({
                         </Button>
                       </td>
                       <td style={{ textAlign: "right" }}>
-                        <Button
-                          style={{ width: "30vw", border: "0" }}
-                          className="backgroundColorNotFocused"
-                          onClick={() => setShowFileUpload(true)}
-                        >
-                          <FaRegFileImage size="10vw" />
-                        </Button>
+                        <FileUploadScanner onScan={onScan} />
                       </td>
                     </tr>
                   </tbody>
@@ -93,21 +106,27 @@ const NewCardView: React.FC<NewCardViewProps> = ({
                 {scannerType === CodeType.BARCODE && (
                   <BarcodeScannerComponent onScan={onScan} />
                 )}
-                {showFileUpload && <FileUploadScanner onScan={onScan} />}
               </div>
 
               <div>
-                {featureFlag_Debug_View && barcodeFormat && (
-                  <MaterialInput
-                    value={scannedCode}
-                    onChange={(e) => onScannedCode(e)}
-                    type="text"
-                    label="Barcode Name"
-                  />
+                {featureFlag_Debug_View && (
+                  <>
+                    <MaterialInput
+                      value={scannedCode}
+                      onChange={(e) => onScannedCode(e)}
+                      type="text"
+                      label="Barcode Code"
+                    />
+                    <MaterialInput
+                      value={color}
+                      onChange={(e) => onColorChange(e)}
+                      type="text"
+                      label="Color"
+                    />
+                  </>
                 )}
               </div>
 
-              <div>{scannedCode && <p>Gescannt: {scannedCode}</p>}</div>
               <div>
                 {featureFlag_Debug_View && barcodeFormat && (
                   <p>Format: {barcodeFormat}</p>
@@ -122,7 +141,7 @@ const NewCardView: React.FC<NewCardViewProps> = ({
         alignment={ButtonAlignment.RIGHT}
         icon={FaRegSave}
         onClick={onAddCard}
-        ariaLabelledBy="Legal Notes Button"
+        ariaLabelledBy="Add Customer Card"
       />
     </div>
   );

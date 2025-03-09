@@ -23,10 +23,10 @@ const BarcodeGeneratorContainer: React.FC<BarcodeGeneratorContainerProps> = ({
       validateInput(value);
 
       if (type === BarcodeType.EAN13 && ![12, 13].includes(value.length)) {
-        throw new Error("EAN-13 muss 12 oder 13 Ziffern haben.");
+        throw new Error("EAN-13 needs to have 12 or 13 numbers.");
       }
       if (type === BarcodeType.UPC_A && ![11, 12].includes(value.length)) {
-        throw new Error("UPC-A muss 11 oder 12 Ziffern haben.");
+        throw new Error("UPC-A needs to have 11 or 12 numbers.");
       }
 
       setError(null); // Reset error state on valid input

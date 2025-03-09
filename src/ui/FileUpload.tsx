@@ -3,6 +3,8 @@ import Logger from "../services/Logger/logger";
 import { Barcode, BarcodeScanner } from "@capacitor-mlkit/barcode-scanning";
 import { BarcodeType } from "../types/BarcodeTypes";
 import { Filesystem, Directory } from "@capacitor/filesystem";
+import Button from "react-bootstrap/esm/Button";
+import { FaRegFileImage } from "react-icons/fa";
 
 interface FileUploadScannerProps {
   onScan: (data: string | null, format: BarcodeType) => void;
@@ -28,7 +30,9 @@ const FileUploadScanner: React.FC<FileUploadScannerProps> = ({ onScan }) => {
         try {
           const result = reader.result as string;
           // Entferne den Data-URL-Header, falls vorhanden
-          const base64Data = result.includes(",") ? result.split(",")[1] : result;
+          const base64Data = result.includes(",")
+            ? result.split(",")[1]
+            : result;
           const filename = `barcode-upload-${Date.now()}.png`;
 
           // Schreibe die Datei in das Cache-Verzeichnis
@@ -39,14 +43,17 @@ const FileUploadScanner: React.FC<FileUploadScannerProps> = ({ onScan }) => {
           });
           const filePath = writeResult.uri; // Dieser Pfad wird vom nativen Layer genutzt
 
-          Logger.info("Barcode-Scan aus hochgeladenem Bild starten mit Pfad: " + filePath);
+          Logger.info(
+            "Barcode-Scan aus hochgeladenem Bild starten mit Pfad: " + filePath
+          );
           const { barcodes } = await BarcodeScanner.readBarcodesFromImage({
             path: filePath,
           });
 
           if (barcodes.length > 0) {
             const barcode: Barcode = barcodes[0];
-            const mappedFormat = formatMapping[barcode.format] || BarcodeType.CODE128;
+            const mappedFormat =
+              formatMapping[barcode.format] || BarcodeType.CODE128;
             onScan(barcode.rawValue, mappedFormat);
           } else {
             onScan(null, BarcodeType.CODE128);
@@ -68,15 +75,23 @@ const FileUploadScanner: React.FC<FileUploadScannerProps> = ({ onScan }) => {
 
   return (
     <div className="file-upload-scanner">
-      <label htmlFor="file-upload">
-        Wähle ein Bild aus deiner Bibliothek zum Scannen:
+      <label htmlFor="file-input" data-testid="settings-notes-import2">
+        <input
+          accept="image/*"
+          id="file-input"
+          multiple
+          type="file"
+          style={{ display: "none" }}
+          onChange={handleFileUpload}
+        />
+        <Button
+          style={{ width: "30vw", border: "0" }}
+          className="backgroundColorNotFocused"
+          onClick={() => document.getElementById('file-input')?.click()}
+        >
+          <FaRegFileImage size="10vw" />
+        </Button>
       </label>
-      <input
-        id="file-upload"
-        type="file"
-        accept="image/*"
-        onChange={handleFileUpload}
-      />
     </div>
   );
 };

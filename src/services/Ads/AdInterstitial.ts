@@ -1,17 +1,18 @@
 import { AdMob, AdOptions } from "@capacitor-community/admob";
 import { Capacitor } from "@capacitor/core";
 import Logger from "../Logger/logger";
+import { config } from "./config";
 
 const showAdInterstitial = async () => {
   try {
     Logger.info("Start Interstitial Ad");
     let adId: string;
       if (Capacitor.getPlatform() === "android") {
-        adId = "ca-app-pub-6250689577715326/6053411682";
+        adId = config.interstitial.android;
       } else if (Capacitor.getPlatform() === "ios") {
-        adId = "ca-app-pub-6250689577715326/5166693665";
+        adId = config.interstitial.ios;
       } else {
-        adId = "ca-app-pub-6250689577715326/6053411682";
+        adId = config.interstitial.android;
       }
 
     const options: AdOptions = {

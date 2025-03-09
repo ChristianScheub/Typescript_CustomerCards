@@ -4,6 +4,7 @@ import Card from "../../ui/Card/Card";
 import { CustomerCard } from "../../services/SQLiteService/types/CustomerCard";
 import FloatingBtn, { ButtonAlignment } from "../../ui/floatingBtn/floatingBtn";
 import { IoAddOutline } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 interface CustomerCardViewProps {
   cards: CustomerCard[];
@@ -18,14 +19,17 @@ const CustomerCardView: React.FC<CustomerCardViewProps> = ({
   calculateFontSize,
   openPopup,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="customer-card-view">
-      <h1>Meine Kundenkarten</h1>
+      <h1>{t("customerCardsList_Title")}</h1>
       <div className="card-list">
         {cards.map((card) => (
           <Card
             key={card.id}
             className="customer-card backgroundColorHighlight"
+            style={{ backgroundColor: card.color, color: "white" }}
             onClick={() => openPopup(card)}
           >
             <div>
@@ -40,7 +44,7 @@ const CustomerCardView: React.FC<CustomerCardViewProps> = ({
         alignment={ButtonAlignment.RIGHT}
         icon={IoAddOutline}
         onClick={openAddNewCard}
-        ariaLabelledBy="Legal Notes Button"
+        ariaLabelledBy="Open Add new Card Dialog"
       />
     </div>
   );

@@ -9,4 +9,5 @@ export interface CustomerCard {
     barcodeEncoding: BarcodeType; // Encoding-Typ für Barcodes
     createdAt: Date; // Zeitstempel der Erstellung
     updatedAt: Date; // Zeitstempel der letzten Aktualisierung
+    color: string;
   }

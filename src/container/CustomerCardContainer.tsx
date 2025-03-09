@@ -3,13 +3,8 @@ import sqliteService from "../services/SQLiteService";
 import { CustomerCard } from "../services/SQLiteService/types/CustomerCard";
 import CustomerCardView from "../views/CustomerCardView/CustomerCardView";
 import Logger from "../services/Logger/logger";
-import Popup from "../ui/Popup/Popup";
-import { BarcodeType } from "../types/BarcodeTypes";
-import BarcodeGeneratorContainer from "../container/GeneratorBarcodeContainer";
-import QRCodeGeneratorContainer from "../container/GeneratorQRCodeContainer";
 import NewCardContainer from "./NewCardContainer";
-import FloatingBtn, { ButtonAlignment } from "../ui/floatingBtn/floatingBtn";
-import { FaTrash } from "react-icons/fa";
+import CustomerCardFocusView from "../views/CustomerCardView/CustomerCardFocusView";
 
 interface CustomerCardContainerProps {
   searchQuery: string;
@@ -46,8 +41,7 @@ const CustomerCardContainer: React.FC<CustomerCardContainerProps> = ({
       sqliteService.deleteCard(selectedCard?.id);
       loadCards();
       closePopup();
-    }
-    else{
+    } else {
       Logger.warn("No card there to delete");
     }
   };
@@ -86,29 +80,6 @@ const CustomerCardContainer: React.FC<CustomerCardContainerProps> = ({
     }
   };
 
-  const renderPopupContent = () => {
-    if (!selectedCard) return null;
-    return (
-      <div style={{ textAlign: "center", color: "black" }}>
-        <h2>{selectedCard.shopName}</h2>
-        {selectedCard.barcodeEncoding === BarcodeType.QRCode ? (
-          <QRCodeGeneratorContainer
-            value={selectedCard.cardContent}
-            size={200}
-            color="#000000"
-          />
-        ) : (
-          <BarcodeGeneratorContainer
-            value={selectedCard.cardContent}
-            type={selectedCard.barcodeEncoding}
-            width={1}
-            color="#000000"
-          />
-        )}
-      </div>
-    );
-  };
-
   if (error) {
     return <div>{error}</div>;
   }
@@ -121,17 +92,15 @@ const CustomerCardContainer: React.FC<CustomerCardContainerProps> = ({
         openPopup={openPopup}
         calculateFontSize={calculateFontSize}
       />
-      {isPopupFocusCardOpen && (
-        <>
-          <Popup onClose={closePopup} content={renderPopupContent()} />
-          <FloatingBtn
-            alignment={ButtonAlignment.RIGHT}
-            icon={FaTrash}
-            onClick={deleteCard}
-            ariaLabelledBy="Legal Notes Button"
-          />
-        </>
+      
+      {isPopupFocusCardOpen && selectedCard && (
+        <CustomerCardFocusView
+          card={selectedCard}
+          onClose={closePopup}
+          onDelete={deleteCard}
+        />
       )}
+
       {isPopupNewCardOpen && (
         <NewCardContainer
           isPopupOpen={isPopupNewCardOpen}

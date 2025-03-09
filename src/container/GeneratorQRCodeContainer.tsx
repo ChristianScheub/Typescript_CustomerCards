@@ -9,18 +9,17 @@ interface QRCodeGeneratorContainerProps {
 
 const QRCodeGeneratorContainer: React.FC<QRCodeGeneratorContainerProps> = ({
   value,
-  size = 128, // Standardgröße des QR-Codes
-  color = "#000000", // Standardfarbe Schwarz
+  size = 128,
+  color = "#000000",
 }) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     try {
-      // Beispielhafte Validierung für QR-Codes
       if (value.length === 0) {
-        throw new Error("Der QR-Code-Wert darf nicht leer sein.");
+        throw new Error("The QR Code shouldn t be 0");
       }
-      setError(null); // Reset error state on valid input
+      setError(null);
     } catch (err: any) {
       setError(err.message);
     }
