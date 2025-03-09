@@ -1,81 +1,72 @@
 export const impressum_text ="<strong>Herausgeber / Service Provider </strong><br />Angaben gem. § 5 TMG: <br />Christian Scheub<br />Ziegeläcker 56<br />71560 Sulzbach an der Murr <br /><br /><strong>Kontaktaufnahme/Contact us</strong> <br />Telefon: +49 176 21674883 <br />E-Mail: christian.developer.app@gmail.com<br /><br />";
 
 export const datenschutz_text = `
-    <strong>Datenschutzerklärung</strong><br />
-Zuletzt aktualisiert am 05.01.2025<br /><br />
+<strong>Diese Datenschutzerklärung und die Informationen sind in Englisch verfügbar unter dieser deutschen Version (Unser Zielmarkt ist derzeit Deutschland)</strong> <br /> <br /> 
+<strong>This privacy policy and information is available in English under this German version (Our target market is currently Germany)</strong> <br /> <br />
+<strong>Datenschutzerklärung für Webseite/App</strong> <br /><br /> 
+Vielen Dank für Ihren Besuch auf unserer Webseite/App. Wir legen großen Wert auf den Schutz Ihrer Daten und möchten Ihnen mit dieser Datenschutzerklärung einen Überblick darüber geben, wie wir Ihre Daten gemäß der Datenschutz-Grundverordnung (DSGVO), den europäischen Datenschutzgesetzen sowie dem California Consumer Privacy Act (CCPA) und kalifornischem Recht behandeln. <br /> <br /> 
+<strong>1. Verantwortliche Stelle</strong><br /> 
+Verantwortlich für die Verarbeitung Ihrer Daten und Herausgeber dieser App ist: <br /> 
+Christian Scheub <br /> 
+Ziegeläcker 56 <br /> 
+71560 Sulzbach an der Murr <br /> <br /> 
+Kontakt Telefon: +49 176 21674883 <br /> 
+Geschäftsführer/Inhaber: Christian Scheub <br /> 
+Bei Fragen oder Anliegen zum Datenschutz können Sie uns gerne unter christian.developer.app@gmail.com kontaktieren. <br /> 
+Link zum Impressum: https://lemon-bay-0f0bdf203.5.azurestaticapps.net/impressum <br /> <br /> 
+<strong>2. Cookies und ähnliche Technologien</strong><br /> 
+Wir verwenden Cookies und ähnliche Technologien, um Ihnen personalisierte Werbung anzubieten und die Leistung unserer Webseite/App zu verbessern. Dazu gehören Cookies, die auf Ihrem Gerät gespeichert werden. Diese Technologien helfen uns, Ihre Präferenzen zu speichern und die Benutzererfahrung zu optimieren. <br /> <br /> 
+<strong>3. Erhebung und Verarbeitung von Daten durch AdMob und AdSense</strong><br /> 
+Wir nutzen AdMob und AdSense, um Ihnen personalisierte Werbung anzuzeigen. Diese Dienste verwenden Cookies und ähnliche Technologien, um Daten über Ihre Nutzung der Webseite/App zu sammeln und maßgeschneiderte Werbung anzubieten. Die von diesen Diensten gesammelten Daten können Folgendes umfassen:
+- Ihre IP-Adresse
+- Informationen über Ihre Interaktionen mit der Webseite/App
+- Gerätespezifische Informationen
 
-<strong>1. Verantwortlicher</strong><br />
-Christian Scheub<br />
-Ziegeläcker 56<br />
-71560 Sulzbach an der Murr<br /><br />
-<strong>Kontaktaufnahme/Contact us</strong><br />
-Telefon: +49 176 21674883<br />
-E-Mail: christian.developer.app@gmail.com<br /><br />
+Die gesammelten Daten werden gemäß den Datenschutzrichtlinien von Google verarbeitet. Weitere Informationen finden Sie in den Datenschutzrichtlinien von [Google AdMob](https://support.google.com/admob/answer/6128543) und [Google AdSense](https://support.google.com/adsense/answer/7007310). <br /> <br /> 
+<strong>4. Verkauf von Daten</strong><br /> 
+Wir verkaufen keine Ihrer Daten. Die von AdMob und AdSense gesammelten Daten unterliegen den Datenschutzrichtlinien der jeweiligen Anbieter. <br /> <br /> 
+<strong>5. Ihre Rechte</strong><br /> 
+Sie haben das Recht, Auskunft über die von Ihnen gespeicherten Daten zu verlangen, deren Berichtigung oder Löschung zu verlangen sowie die Verarbeitung einzuschränken. Da wir keine eigenen Daten speichern, beziehen sich diese Rechte auf die Daten, die durch AdMob und AdSense gesammelt werden. Bitte kontaktieren Sie die jeweiligen Anbieter für weitere Informationen und zur Ausübung Ihrer Rechte. <br /> <br /> 
+<strong>6. Datensicherheit</strong><br /> 
+Wir bemühen uns, Ihre Daten durch entsprechende technische und organisatorische Maßnahmen zu schützen. Die Sicherheit Ihrer Daten ist uns wichtig, und wir verwenden sicherheitsrelevante Maßnahmen gemäß den gesetzlichen Anforderungen. <br /> <br /> 
+<strong>7. Verwendete Begrifflichkeiten</strong><br /> 
+Personenbezogene Daten sind Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. In diesem Zusammenhang können personenbezogene Daten von AdMob und AdSense gesammelt und verarbeitet werden. <br /> <br /> 
+<strong>8. Änderungen dieser Datenschutzerklärung</strong><br /> 
+Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern, um den rechtlichen Anforderungen zu entsprechen oder Änderungen unserer Datenverarbeitungspraktiken widerzuspiegeln. Bitte überprüfen Sie diese Erklärung regelmäßig, um auf dem Laufenden zu bleiben. <br /> 
+Datum: 09.03.2025 <br /> <br /> 
+<strong>Privacy Policy for Website/App</strong> <br /> 
+Thank you for visiting our website/app. We attach great importance to the protection of your data and would like to inform you that we use AdMob and AdSense to provide personalized advertising. These services may use cookies and similar technologies to collect data about your use of the website/app and to deliver tailored advertising. The data collected by these services may include:
+- Your IP address
+- Information about your interactions with the website/app
+- Device-specific information
 
-<strong>2. Erhebung und Verarbeitung personenbezogener Daten</strong><br />
-Wir erheben und verarbeiten folgende personenbezogene Daten:<br />
-- <strong>Account E-Mail-Adresse:</strong> Wird zur Authentifizierung und Kommunikation verwendet.<br />
-- <strong>Passwort:</strong> Wird zur Sicherstellung des Zugriffs auf Ihr Konto gespeichert.<br />
-- <strong>Google-ID</strong> Falls sie sich mit Google einloggen, dann auch für die Authentifzierung <br />
-- <strong>Erstelldatum des Accounts und das Datum des letzten Login:</strong> Dient der Verwaltung Ihres Kontos.<br />
-- <strong>Standortdaten:</strong> Werden lokal gespeichert und verwendet, um Ihnen relevante Veranstaltungen anzuzeigen. Nur der Standort, den Sie für ein Event auswählen, wird in die Cloud übertragen.<br />
-- <strong>Eventdaten:</strong> Titel, Ersteller und Beschreibung des Events sowie Ihre Teilnahme werden gespeichert.<br />
-- <strong>Post- und Kommentardaten:</strong> Inhalt, Datum und Ihr Name werden gespeichert, wenn Sie einen Post erstellen oder kommentieren.<br /><br />
+The data collected is processed in accordance with Google’s privacy policies. For more information, please refer to [Google AdMob](https://support.google.com/admob/answer/6128543) and [Google AdSense](https://support.google.com/adsense/answer/7007310). <br /> <br /> 
+<strong>1. Responsible Body</strong><br /> 
+The responsible party for processing your data is: Christian Scheub <br /> 
+Ziegeläcker 56 <br /> 
+71560 Sulzbach an der Murr <br /> <br /> 
+Contact phone: +49 176 21674883 <br /> 
+Managing Director/Owner: Christian Scheub <br /> 
+If you have any questions or concerns about data protection, please feel free to contact us at christian.developer.app@gmail.com. <br /> 
+Link to the imprint: https://kind-dune-0dfff9903.4.azurestaticapps.net/imprint <br /> <br /> 
+<strong>2. Cookies and Similar Technologies</strong><br /> 
+We use cookies and similar technologies to offer you personalized advertising and improve the performance of our website/app. These technologies include cookies that are stored on your device. They help us store your preferences and optimize the user experience. <br /> <br /> 
+<strong>3. Collection and Processing of Data by AdMob and AdSense</strong><br /> 
+We use AdMob and AdSense to display personalized advertising. These services may use cookies and similar technologies to collect data about your use of the website/app and deliver tailored advertising. Data collected by these providers may include:
+- Your IP address
+- Information about your interactions with the website/app
+- Device-specific information
 
-<strong>3. Rechtsgrundlage der Datenverarbeitung</strong><br />
-Wir verarbeiten Ihre personenbezogenen Daten auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO bei der Registrierung. In bestimmten Fällen erfolgt die Verarbeitung auch zur Erfüllung eines Vertrags oder zur Durchführung vorvertraglicher Maßnahmen gemäß Art. 6 Abs. 1 lit. b DSGVO oder aufgrund berechtigter Interessen gemäß Art. 6 Abs. 1 lit. f DSGVO.<br /><br />
-
-<strong>4. Zweck der Datenverarbeitung </strong><br />
-Wir verarbeiten Ihre personenbezogenen Daten, um Ihnen die App bereitzustellen, ihre Funktionalität sicherzustellen und unsere Dienstleistungen zu erbringen. Dies umfasst die Identifikation, Kommunikation mit Ihnen und die Ausführung der von Ihnen gewünschten Funktionen.
-
-<br /><br /><strong>5. Nutzung von Google Firebase</strong><br />
-Alle oben genannten Daten werden in der EU über Google Firebase gespeichert und verarbeitet. Google Firebase ist ein Dienst von Google LLC, der uns bei der Bereitstellung unserer App-Dienste unterstützt. Weitere Informationen zur Datenverarbeitung durch Google Firebase finden Sie in der Datenschutzrichtlinie von Google. https://policies.google.com/privacy <br /><br />
-
-<strong>6. Nutzung von Kartenfunktionen</strong><br />
-Unsere App bietet Kartenfunktionen an, um Ihnen eine verbesserte Nutzererfahrung zu bieten. Je nachdem, welches Betriebssystem Sie verwenden, greifen wir auf unterschiedliche Kartenanbieter zurück.<br />
-- <strong>Leaflet mit OpenStreetMap (Android):</strong> Wenn Sie unsere App auf einem Android-Gerät verwenden, nutzen wir Leaflet mit OpenStreetMap, um Kartenfunktionen bereitzustellen. Bei der Nutzung dieser Kartenfunktionen können personenbezogene Daten und Standortinformationen an die jeweiligen Anbieter übermittelt werden. Weitere Informationen zur Datenverarbeitung durch Leaflet und OpenStreetMap finden Sie in deren Datenschutzrichtlinien.<br />
-- <strong>Apple Karten (iOS):</strong> Wenn Sie unsere App auf einem iOS-Gerät verwenden, nutzen wir Apple Karten. Bei der Nutzung von Apple Karten können personenbezogene Daten und Standortinformationen an Apple übermittelt werden. Weitere Informationen zur Datenverarbeitung durch Apple Karten und zu Ihren Rechten und Einstellungsmöglichkeiten zum Schutz Ihrer Privatsphäre finden Sie in der Datenschutzrichtlinie von Apple.<br /><br />
-
-<strong>7. Cookies und Tracking</strong><br />
-Unsere App verwendet keine Tracking-Tools. Wir nutzen jedoch den Local Storage, um den aktuellen Zustand der App zwischenzuspeichern und als Zwischen-Caching zu verwenden. Dies dient der technischen Umsetzung und Verbesserung der Nutzererfahrung.<br /><br />
-
-<strong>8. Externe Weitergabe</strong><br />
-Wir geben Ihre Daten nicht an Dritte weiter, es sei denn, dies ist zur Erfüllung des Vertrages erforderlich oder Sie haben ausdrücklich eingewilligt.<br /><br />
-
-<strong>9. Dauer der Datenspeicherung</strong><br />
-Ihre Daten werden so lange gespeichert, wie Sie ein registriertes Nutzerkonto bei uns haben. Wenn Sie Ihr Konto löschen, werden Ihre Daten gemäß den gesetzlichen Vorgaben gelöscht, spätestens jedoch nach 3 Monaten.<br /><br />
-
-<strong>10. Betroffenenrechte</strong><br />
-Sie haben gemäß DSGVO folgende Rechte:<br />
-- <strong>Auskunft</strong>: Sie können jederzeit Auskunft über die von uns gespeicherten Daten verlangen.<br />
-- <strong>Berichtigung</strong>: Sie haben das Recht, unrichtige oder unvollständige Daten berichtigen zu lassen.<br />
-- <strong>Löschung</strong>: Sie können die Löschung Ihrer Daten verlangen („Recht auf Vergessenwerden“).<br />
-- <strong>Einschränkung</strong>: Sie können die Verarbeitung Ihrer Daten einschränken lassen.<br />
-- <strong>Datenübertragbarkeit</strong>: Sie haben das Recht, Ihre bereitgestellten Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.<br />
-- <strong>Widerspruch</strong>: Sie können der Verarbeitung Ihrer Daten widersprechen, sofern diese auf Grundlage eines berechtigten Interesses erfolgt.<br />
-- <strong>Automatisierte Entscheidungen</strong>: Sie haben das Recht, nicht einer ausschließlich auf automatisierter Verarbeitung beruhenden Entscheidung unterworfen zu werden, die Ihnen gegenüber rechtliche Wirkung entfaltet oder Sie in ähnlicher Weise erheblich beeinträchtigt.<br />
-- <strong>Recht auf Beschwerde</strong>: Sie haben das Recht, bei einer Aufsichtsbehörde Beschwerde einzulegen, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt. <br /><br />
-Gemäß dem California Consumer Privacy Act (CCPA) haben Sie folgende Rechte: <br />
-- <strong>Recht auf Benachrichtigung:</strong> Sie haben das Recht, zum Zeitpunkt oder vor der Erfassung Ihrer persönlichen Daten informiert zu werden.<br />
-- <strong>Recht auf Zugriff:</strong> Sie können verlangen, dass Ihnen die von uns gesammelten persönlichen Daten offengelegt werden.<br />
-- <strong>Recht auf Opt-out:</strong> Sie können verlangen, dass wir Ihre persönlichen Daten nicht verkaufen.<br />
-- <strong>Recht auf Löschung:</strong> Sie können verlangen, dass wir Ihre persönlichen Daten löschen.<br />
-- <strong>Recht auf Einsehen von Dokumenten:</strong> Sie haben das Recht, bestimmte Informationen über unsere Datenerhebungspraktiken einzusehen.<br />
-Bitte beachten Sie, dass die CCPA spezifisch für Einwohner Kaliforniens gilt. <br />
-Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: Christian Scheub (Kontaktinformationen siehe oben) <br /><br />
-
-
-<strong>11. Datensicherheit</strong><br />
-Der Schutz Ihrer personenbezogenen Daten hat für uns höchste Priorität. Wir haben umfangreiche technische und organisatorische Sicherheitsmaßnahmen implementiert, um sicherzustellen, dass Ihre Daten vor Verlust, Manipulation und unberechtigtem Zugriff geschützt sind. Unsere Sicherheitsmaßnahmen werden regelmäßig überprüft und an neueste technologische Entwicklungen angepasst.<br />
-Alle Daten werden in einer sicheren Betriebsumgebung gespeichert, die nicht öffentlich zugänglich ist. Zudem erfolgen sämtliche Datenübertragungen zwischen Ihrem Gerät und unseren Servern über verschlüsselte Verbindungen mittels HTTPS, wodurch ein hohes Maß an Datenintegrität und -vertraulichkeit gewährleistet wird.<br />
-Unsere Mitarbeiter und Dienstleister sind über die geltenden Datenschutzbestimmungen informiert und an vertraulichen Umgang mit personenbezogenen Daten gebunden. Zudem stellen wir sicher, dass Dritte, die in unserem Auftrag Daten verarbeiten, dieselben strengen Sicherheits- und Vertraulichkeitsstandards einhalten.<br /><br />
-
-<strong>12. Kinderschutz</strong><br />
-Unsere App richtet sich an ein erwachsenes Publikum und ist nicht für die Nutzung durch Kinder bestimmt. Wir erfassen wissentlich keine personenbezogenen Daten von Personen unter 16 Jahren. Sollten wir feststellen, dass wir unbeabsichtigt personenbezogene Daten von Personen unter 16 Jahren erfasst haben, werden diese Daten umgehend aus unseren Systemen gelöscht.<br />
-Wenn Eltern oder Erziehungsberechtigte feststellen, dass ihre Kinder uns ohne ihre Zustimmung personenbezogene Daten übermittelt haben, bitten wir um umgehenden Kontakt. Wir werden dann entsprechende Maßnahmen ergreifen, um solche Daten aus unseren Systemen zu entfernen.<br />
-Wir empfehlen Eltern und Erziehungsberechtigten dringend, die Online-Aktivitäten ihrer Kinder zu überwachen und sicherzustellen, dass ihre Kinder beim Gebrauch von Online-Diensten keine persönlichen Informationen ohne ihre Erlaubnis preisgeben.<br /><br />
-
-<strong>13. Änderungen der Datenschutzerklärung</strong><br />
-Wir behalten uns vor, diese Datenschutzerklärung jederzeit zu ändern. Bitte informieren Sie sich regelmäßig über den aktuellen Stand.
-
+Data collected is processed in accordance with Google’s privacy policies. For more information, please refer to [Google AdMob](https://support.google.com/admob/answer/6128543) and [Google AdSense](https://support.google.com/adsense/answer/7007310). <br /> <br /> 
+<strong>4. Sale of Data</strong><br /> 
+We do not sell or receive any data about you. Data collected by AdMob and AdSense is subject to the privacy policies of the respective providers. <br /> <br /> 
+<strong>5. Your Rights</strong><br /> 
+You have the right to request information about the data stored about you, to request correction or deletion, and to restrict processing. Since we do not store any data ourselves, these rights pertain to the data collected by AdMob and AdSense. Please contact the respective providers for more information. <br /> <br /> 
+<strong>6. Data Security</strong><br /> 
+We strive to protect your data through appropriate technical and organizational measures. The security of your data is important to us, and we use security-related measures in accordance with legal requirements. <br /> <br /> 
+<strong>7. Terms Used</strong><br /> 
+Personal data refers to information relating to an identified or identifiable natural person. In this context, personal data may be collected and processed by AdMob and AdSense. <br /> <br /> 
+<strong>8. Changes to This Privacy Policy</strong><br /> 
+We reserve the right to change this privacy policy to comply with legal requirements or to reflect changes in our data processing practices. Please check this statement regularly to stay up to date. <br /> 
+Date: March 9, 2025
 `;

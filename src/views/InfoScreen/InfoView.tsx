@@ -68,8 +68,6 @@ const ViewInfo: React.FC<ViewInfoProps> = ({
             </p>
             <hr />
             <UsedLibsListContainer />
-            {featureFlag_Debug_Settings_View && (
-            <>
             <hr />
             <a
               href="https://github.com/ChristianScheub/Typescript_CustomerCards"
@@ -79,8 +77,7 @@ const ViewInfo: React.FC<ViewInfoProps> = ({
             >
               <p>{t("settings_GitHubRepo")}</p>
             </a>
-            </>
-          )}
+          
             <hr />
             <br /> <br /> <br /> <br /> <br />
           </div>
