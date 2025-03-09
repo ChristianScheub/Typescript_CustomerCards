@@ -13,9 +13,11 @@ Ziegeläcker 56 <br />
 Kontakt Telefon: +49 176 21674883 <br /> 
 Geschäftsführer/Inhaber: Christian Scheub <br /> 
 Bei Fragen oder Anliegen zum Datenschutz können Sie uns gerne unter christian.developer.app@gmail.com kontaktieren. <br /> 
-Link zum Impressum: https://lemon-bay-0f0bdf203.5.azurestaticapps.net/impressum <br /> <br /> 
-<strong>2. Cookies und ähnliche Technologien</strong><br /> 
-Wir verwenden Cookies und ähnliche Technologien, um Ihnen personalisierte Werbung anzubieten und die Leistung unserer Webseite/App zu verbessern. Dazu gehören Cookies, die auf Ihrem Gerät gespeichert werden. Diese Technologien helfen uns, Ihre Präferenzen zu speichern und die Benutzererfahrung zu optimieren. <br /> <br /> 
+Link zum Impressum: https://kind-dune-0dfff9903.4.azurestaticapps.net/imprint <br /> <br /> 
+<strong>2. Cookies, IndexedDB und ähnliche Technologien</strong><br /> 
+Wir verwenden Cookies und ähnliche Technologien, um Ihnen personalisierte Werbung anzubieten und die Leistung unserer Webseite/App zu verbessern. Dazu gehören Cookies, die auf Ihrem Gerät gespeichert werden. Diese Technologien helfen uns, Ihre Präferenzen zu speichern und die Benutzererfahrung zu optimieren. <br />
+Zudem nutzen wir zur lokalen Speicherung der Kundenkarten eine lokale IndexedDB. Ihre Kundenkarten bleiben aber immer lokal. <br />
+Eine IndexedDB ist eine rein lokale SQL Datenbank im Browser welche sie sich vorstellen können wie eine große Tabelle in welcher wir ihre Daten speichern. <br /> <br /> 
 <strong>3. Erhebung und Verarbeitung von Daten durch AdMob und AdSense</strong><br /> 
 Wir nutzen AdMob und AdSense, um Ihnen personalisierte Werbung anzuzeigen. Diese Dienste verwenden Cookies und ähnliche Technologien, um Daten über Ihre Nutzung der Webseite/App zu sammeln und maßgeschneiderte Werbung anzubieten. Die von diesen Diensten gesammelten Daten können Folgendes umfassen:
 - Ihre IP-Adresse
@@ -50,7 +52,9 @@ Managing Director/Owner: Christian Scheub <br />
 If you have any questions or concerns about data protection, please feel free to contact us at christian.developer.app@gmail.com. <br /> 
 Link to the imprint: https://kind-dune-0dfff9903.4.azurestaticapps.net/imprint <br /> <br /> 
 <strong>2. Cookies and Similar Technologies</strong><br /> 
-We use cookies and similar technologies to offer you personalized advertising and improve the performance of our website/app. These technologies include cookies that are stored on your device. They help us store your preferences and optimize the user experience. <br /> <br /> 
+We use cookies and similar technologies to offer you personalized advertising and improve the performance of our website/app. These technologies include cookies that are stored on your device. They help us store your preferences and optimize the user experience. <br />
+We also use a local IndexedDB to store the customer cards locally. However, your customer cards always remain local. <br />
+An IndexedDB is a purely local SQL database in the browser which you can think of as a large table in which we store your data. <br /> <br /> 
 <strong>3. Collection and Processing of Data by AdMob and AdSense</strong><br /> 
 We use AdMob and AdSense to display personalized advertising. These services may use cookies and similar technologies to collect data about your use of the website/app and deliver tailored advertising. Data collected by these providers may include:
 - Your IP address

@@ -16,6 +16,7 @@
     "settings_Dialog_DeleteAll": "Sind Sie sicher, dass Sie alle Einträge löschen möchten?",
 
     "navbar_searchForm": "Karte suchen...",
+    "noCardsThere": "Noch keine Karte hier... Klicken sie das Plus zum hinzufügen!",
 
     "newCard_Title": "Neue Kundenkarte",
     "newCard_shopForm": "Geben Sie den Shop-Name ein",
@@ -23,10 +24,5 @@
     "newCard_scannedSuccessfully": "Erfolgreich gescannt: ",
     "newCard_addedSuccessfully": "Erfolgreich hinzugefügt!",
     "newCard_errorAdding": "Es ist ein Fehler aufgetreten, bitte erneut versuchen!",
-    "newCard_missingInformation": "Bitte geben sie den Shop Name ein und Scannen sie eine Karte!",
-
-    "customerCardsList_Title": "Meine Kundenkarten"
-
-
-
+    "newCard_missingInformation": "Bitte geben sie den Shop Name ein und Scannen sie eine Karte!"
 }

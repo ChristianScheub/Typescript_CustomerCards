@@ -3,6 +3,7 @@ import { Navbar, Container, Button, Form } from "react-bootstrap";
 import { FaTrash, FaAngleLeft } from "react-icons/fa";
 import { MdOutlineSettings } from "react-icons/md";
 import { TFunction } from "i18next";
+import { Capacitor } from "@capacitor/core";
 import './screen-navbar.css';
 
 interface NavBarViewProps {
@@ -30,11 +31,14 @@ const NavBarView: React.FC<NavBarViewProps> = ({
   onSearchSubmit,
   t,
 }) => {
+  const platform = Capacitor.getPlatform();
+  const paddingTop = platform === 'ios' ? '9vw' : '2vw';
+
   return (
     <Navbar
       variant="dark"
       className="navbarElement width100 justify-content-between backgroundColorNotFocused shadow"
-      style={{paddingTop: "9vw"}}
+      style={{paddingTop}}
     >
       <Container className="navbarContainer">
         {showBackButton ? (

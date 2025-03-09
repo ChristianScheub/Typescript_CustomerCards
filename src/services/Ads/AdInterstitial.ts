@@ -16,8 +16,7 @@ const showAdInterstitial = async () => {
       }
 
     const options: AdOptions = {
-      adId: adId,
-      isTesting: true
+      adId: adId
     };
 
     await AdMob.prepareInterstitial(options);
