@@ -33,6 +33,8 @@ export const updateCard = async (
   };
 
   request.onerror = (event) => {
-    Logger.error("Error updating card:" + (event.target as IDBRequest).error);
+    const error = (event.target as IDBRequest).error;
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    Logger.error("Error updating card: " + errorMessage);    
   };
 };

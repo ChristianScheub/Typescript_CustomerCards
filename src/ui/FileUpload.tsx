@@ -11,7 +11,6 @@ interface FileUploadScannerProps {
 }
 
 const FileUploadScanner: React.FC<FileUploadScannerProps> = ({ onScan }) => {
-  // Mapping von Plugin-Format-Strings auf den internen BarcodeType
   const formatMapping: { [key: string]: BarcodeType } = {
     EAN_13: BarcodeType.EAN13,
     CODE_128: BarcodeType.CODE128,
@@ -64,8 +63,11 @@ const FileUploadScanner: React.FC<FileUploadScannerProps> = ({ onScan }) => {
         }
       };
 
-      reader.onerror = (error) => {
-        Logger.error("Fehler beim Lesen der Datei: " + error);
+      reader.onerror = (event) => {
+        const error = (event.target as FileReader).error;
+        const errorMessage =
+          error instanceof DOMException ? error.message : "Unbekannter Fehler";
+        Logger.error("Fehler beim Lesen der Datei: " + errorMessage);
         onScan(null, BarcodeType.CODE128);
       };
 
@@ -87,7 +89,7 @@ const FileUploadScanner: React.FC<FileUploadScannerProps> = ({ onScan }) => {
         <Button
           style={{ width: "30vw", border: "0" }}
           className="backgroundColorNotFocused"
-          onClick={() => document.getElementById('file-input')?.click()}
+          onClick={() => document.getElementById("file-input")?.click()}
         >
           <FaRegFileImage size="10vw" />
         </Button>

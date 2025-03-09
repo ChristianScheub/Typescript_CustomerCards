@@ -1,6 +1,15 @@
 # CardMaster
 Last Edit: 03.2025 <br>
 Language: Typescript React Capacitor with Vite<br>
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_CustomerCards&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_CustomerCards)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_CustomerCards&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_CustomerCards) 
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_CustomerCards&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_CustomerCards)
+ [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_CustomerCards&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_CustomerCards)
+
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_CustomerCards&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_CustomerCards)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_CustomerCards&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_CustomerCards)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_CustomerCards&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_CustomerCards) 
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_CustomerCards&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_CustomerCards)
 
 CardMaster is a simple app that allows you to store customer cards locally on your phone. It supports both QR codes and barcode customer cards.
 

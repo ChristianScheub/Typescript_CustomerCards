@@ -17,9 +17,10 @@ export const initialize = async (): Promise<void> => {
     };
 
     request.onsuccess = () => {
-      Logger.infoService("Datenbank erfolgreich initialisiert."+request.result);
+      const db = request.result;
+      Logger.infoService(`Database '${db.name}' successfully initialized.`);
       resolve();
-    };
+    };    
 
     request.onerror = (event) => {
       handleIndexedDBError(reject, event);
