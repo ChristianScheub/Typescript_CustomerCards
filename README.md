@@ -13,6 +13,15 @@ Language: Typescript React Capacitor with Vite<br>
 
 CardMaster is a simple app that allows you to store customer cards locally on your phone. It supports both QR codes and barcode customer cards.
 
+| App Store Screen 1                                                      | App Store Screen 2                                                      |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| <img src="images/CardMasterIntro.png" alt="App Screen 1" height="300"> | <img src="images/CardMaster_4Screens.png" alt="App Screen2 " height="300"> |
+
+| App Store Screen 3                                                      | App Store Screen 4                                                     |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| <img src="images/screen3.png" alt="App Screen 4" height="300"> | <img src="images/screen4.png" alt="App Screen4 " height="300"> |
+
+
 ## Available Scripts
 
 In the project directory, you can run:
