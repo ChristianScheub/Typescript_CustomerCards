@@ -1,0 +1,27 @@
+{
+    "settings_Title": "Настройки",
+    "settings_DeleteAll": "Удалить все локальные данные",
+    "settings_DeleteUserAndData": "Удалить пользователя",
+    "settings_DeleteUserConfirmDialog": "Вы уверены, что хотите удалить пользователя?",
+    "settings_DeleteUserErrorContactAdmin": "Произошла ошибка. Выйдите и войдите снова. Если проблема не исчезнет, свяжитесь с нами через юридическую информацию.",
+    "settings_EmailPasswordRequiredToDelete": "Для удаления аккаунта необходимо войти в систему!",
+    "settings_Information": "Информация",
+    "settings_Datenschutz": "Политика конфиденциальности",
+    "settings_Impressum": "Юридическая информация",
+    "settings_GitHubRepo": "Репозиторий GitHub",
+    "setting_Menu_OpenSourceModulList": "Используемые библиотеки",
+    "setting_OpenSurceModulListTItle": "Используемые библиотеки NPM",
+    "setting_OpenSourceModulListClose": "Закрыть",
+    "settings_Dialog_DeleteAllSuccessful": "Все данные успешно удалены. Перезапустите приложение, чтобы предотвратить сохранение новых данных!",
+    "settings_Dialog_DeleteAll": "Вы уверены, что хотите удалить все записи?",
+    "navbar_searchForm": "Поиск карты...",
+    "noCardsThere": "Пока нет карт... Нажмите кнопку «плюс», чтобы добавить!",
+    "newCard_Title": "Новая карта клиента",
+    "newCard_shopForm": "Введите название магазина",
+    "newCard_selectColor": "Выберите цвет",
+    "newCard_scannedSuccessfully": "Успешно отсканировано: ",
+    "newCard_addedSuccessfully": "Успешно добавлено!",
+    "newCard_errorAdding": "Произошла ошибка, попробуйте снова!",
+    "newCard_missingInformation": "Введите название магазина и отсканируйте карту!"
+  }
+  

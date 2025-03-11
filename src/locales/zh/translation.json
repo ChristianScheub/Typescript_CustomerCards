@@ -1,0 +1,27 @@
+{
+    "settings_Title": "设置",
+    "settings_DeleteAll": "删除所有本地数据",
+    "settings_DeleteUserAndData": "删除用户",
+    "settings_DeleteUserConfirmDialog": "你确定要删除用户吗？",
+    "settings_DeleteUserErrorContactAdmin": "发生错误。请退出并重新登录。如果问题仍然存在，请通过法律声明联系我们。",
+    "settings_EmailPasswordRequiredToDelete": "您需要登录才能删除账户！",
+    "settings_Information": "信息",
+    "settings_Datenschutz": "隐私政策",
+    "settings_Impressum": "法律声明",
+    "settings_GitHubRepo": "GitHub 仓库",
+    "setting_Menu_OpenSourceModulList": "使用的库",
+    "setting_OpenSurceModulListTItle": "使用的 NPM 库",
+    "setting_OpenSourceModulListClose": "关闭",
+    "settings_Dialog_DeleteAllSuccessful": "所有数据已成功删除。请重新启动应用程序以防止保存新数据！",
+    "settings_Dialog_DeleteAll": "你确定要删除所有条目吗？",
+    "navbar_searchForm": "搜索卡片...",
+    "noCardsThere": "还没有卡片... 按下加号按钮添加！",
+    "newCard_Title": "新会员卡",
+    "newCard_shopForm": "输入商店名称",
+    "newCard_selectColor": "选择颜色",
+    "newCard_scannedSuccessfully": "扫描成功: ",
+    "newCard_addedSuccessfully": "添加成功！",
+    "newCard_errorAdding": "发生错误，请重试！",
+    "newCard_missingInformation": "请输入商店名称并扫描卡片！"
+  }
+  

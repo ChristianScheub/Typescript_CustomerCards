@@ -1,0 +1,27 @@
+{
+    "settings_Title": "설정",
+    "settings_DeleteAll": "모든 로컬 데이터 삭제",
+    "settings_DeleteUserAndData": "사용자 삭제",
+    "settings_DeleteUserConfirmDialog": "정말로 사용자를 삭제하시겠습니까?",
+    "settings_DeleteUserErrorContactAdmin": "오류가 발생했습니다. 로그아웃 후 다시 로그인해 주세요. 문제가 지속되면 법적 공지를 통해 문의해 주세요.",
+    "settings_EmailPasswordRequiredToDelete": "계정을 삭제하려면 로그인해야 합니다!",
+    "settings_Information": "정보",
+    "settings_Datenschutz": "개인정보 보호정책",
+    "settings_Impressum": "법적 고지",
+    "settings_GitHubRepo": "GitHub 저장소",
+    "setting_Menu_OpenSourceModulList": "사용된 라이브러리",
+    "setting_OpenSurceModulListTItle": "사용된 NPM 라이브러리",
+    "setting_OpenSourceModulListClose": "닫기",
+    "settings_Dialog_DeleteAllSuccessful": "모든 데이터가 성공적으로 삭제되었습니다. 새로운 데이터가 저장되지 않도록 앱을 다시 시작하세요!",
+    "settings_Dialog_DeleteAll": "정말 모든 항목을 삭제하시겠습니까?",
+    "navbar_searchForm": "카드 검색...",
+    "noCardsThere": "아직 카드가 없습니다... 추가하려면 플러스 버튼을 누르세요!",
+    "newCard_Title": "새 고객 카드",
+    "newCard_shopForm": "상점 이름 입력",
+    "newCard_selectColor": "색상 선택",
+    "newCard_scannedSuccessfully": "성공적으로 스캔됨: ",
+    "newCard_addedSuccessfully": "성공적으로 추가됨!",
+    "newCard_errorAdding": "오류가 발생했습니다. 다시 시도해 주세요!",
+    "newCard_missingInformation": "상점 이름을 입력하고 카드를 스캔하세요!"
+  }
+  

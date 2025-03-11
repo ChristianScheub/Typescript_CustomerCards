@@ -1,0 +1,27 @@
+{
+    "settings_Title": "Instellingen",
+    "settings_DeleteAll": "Alle lokale gegevens verwijderen",
+    "settings_DeleteUserAndData": "Gebruiker verwijderen",
+    "settings_DeleteUserConfirmDialog": "Weet u zeker dat u uw gebruiker wilt verwijderen?",
+    "settings_DeleteUserErrorContactAdmin": "Er is een fout opgetreden. Log uit en log opnieuw in. Als het probleem zich blijft voordoen, neem dan contact met ons op via de juridische kennisgeving.",
+    "settings_EmailPasswordRequiredToDelete": "U moet inloggen om uw account te verwijderen!",
+    "settings_Information": "Informatie",
+    "settings_Datenschutz": "Privacybeleid",
+    "settings_Impressum": "Juridische kennisgeving",
+    "settings_GitHubRepo": "GitHub-repository",
+    "setting_Menu_OpenSourceModulList": "Gebruikte bibliotheken",
+    "setting_OpenSurceModulListTItle": "Gebruikte NPM-bibliotheken",
+    "setting_OpenSourceModulListClose": "Sluiten",
+    "settings_Dialog_DeleteAllSuccessful": "Alle gegevens zijn succesvol verwijderd. Start de applicatie opnieuw om te voorkomen dat er nieuwe gegevens worden opgeslagen!",
+    "settings_Dialog_DeleteAll": "Weet u zeker dat u alle vermeldingen wilt verwijderen?",
+    "navbar_searchForm": "Zoek een kaart...",
+    "noCardsThere": "Nog geen kaarten... Druk op de plusknop om er een toe te voegen!",
+    "newCard_Title": "Nieuwe klantenkaart",
+    "newCard_shopForm": "Voer de winkelnaam in",
+    "newCard_selectColor": "Kies een kleur",
+    "newCard_scannedSuccessfully": "Succesvol gescand: ",
+    "newCard_addedSuccessfully": "Succesvol toegevoegd!",
+    "newCard_errorAdding": "Er is een fout opgetreden, probeer het opnieuw!",
+    "newCard_missingInformation": "Voer de winkelnaam in en scan een kaart!"
+  }
+  

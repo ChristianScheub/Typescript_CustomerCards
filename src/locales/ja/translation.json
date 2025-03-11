@@ -1,0 +1,27 @@
+{
+    "settings_Title": "設定",
+    "settings_DeleteAll": "すべてのローカルデータを削除",
+    "settings_DeleteUserAndData": "ユーザーを削除",
+    "settings_DeleteUserConfirmDialog": "本当にユーザーを削除しますか？",
+    "settings_DeleteUserErrorContactAdmin": "エラーが発生しました。ログアウトして再度ログインしてください。問題が解決しない場合は、法的通知に記載された方法でお問い合わせください。",
+    "settings_EmailPasswordRequiredToDelete": "アカウントを削除するには、ログインする必要があります！",
+    "settings_Information": "情報",
+    "settings_Datenschutz": "プライバシーポリシー",
+    "settings_Impressum": "法的通知",
+    "settings_GitHubRepo": "GitHub リポジトリ",
+    "setting_Menu_OpenSourceModulList": "使用ライブラリ",
+    "setting_OpenSurceModulListTItle": "使用した NPM ライブラリ",
+    "setting_OpenSourceModulListClose": "閉じる",
+    "settings_Dialog_DeleteAllSuccessful": "すべてのデータが正常に削除されました。新しいデータの保存を防ぐためにアプリを再起動してください！",
+    "settings_Dialog_DeleteAll": "本当にすべてのエントリを削除しますか？",
+    "navbar_searchForm": "カードを検索...",
+    "noCardsThere": "まだカードがありません... 追加するにはプラスボタンを押してください！",
+    "newCard_Title": "新しい会員カード",
+    "newCard_shopForm": "店舗名を入力してください",
+    "newCard_selectColor": "色を選択",
+    "newCard_scannedSuccessfully": "正常にスキャンされました: ",
+    "newCard_addedSuccessfully": "正常に追加されました！",
+    "newCard_errorAdding": "エラーが発生しました。もう一度試してください！",
+    "newCard_missingInformation": "店舗名を入力し、カードをスキャンしてください！"
+  }
+  

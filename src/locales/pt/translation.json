@@ -1,0 +1,27 @@
+{
+    "settings_Title": "Configurações",
+    "settings_DeleteAll": "Excluir todos os dados locais",
+    "settings_DeleteUserAndData": "Excluir usuário",
+    "settings_DeleteUserConfirmDialog": "Tem certeza de que deseja excluir seu usuário?",
+    "settings_DeleteUserErrorContactAdmin": "Ocorreu um erro. Faça logout e faça login novamente. Se o problema persistir, entre em contato conosco através do aviso legal.",
+    "settings_EmailPasswordRequiredToDelete": "Você precisa fazer login para excluir sua conta!",
+    "settings_Information": "Informações",
+    "settings_Datenschutz": "Política de privacidade",
+    "settings_Impressum": "Aviso legal",
+    "settings_GitHubRepo": "Repositório GitHub",
+    "setting_Menu_OpenSourceModulList": "Bibliotecas utilizadas",
+    "setting_OpenSurceModulListTItle": "Bibliotecas NPM utilizadas",
+    "setting_OpenSourceModulListClose": "Fechar",
+    "settings_Dialog_DeleteAllSuccessful": "Todos os dados foram excluídos com sucesso. Reinicie o aplicativo para evitar o salvamento de novos dados!",
+    "settings_Dialog_DeleteAll": "Tem certeza de que deseja excluir todas as entradas?",
+    "navbar_searchForm": "Pesquisar cartão...",
+    "noCardsThere": "Ainda não há cartões... Pressione o botão de adição para adicionar um!",
+    "newCard_Title": "Novo cartão de cliente",
+    "newCard_shopForm": "Digite o nome da loja",
+    "newCard_selectColor": "Selecionar cor",
+    "newCard_scannedSuccessfully": "Escaneado com sucesso: ",
+    "newCard_addedSuccessfully": "Adicionado com sucesso!",
+    "newCard_errorAdding": "Ocorreu um erro, tente novamente!",
+    "newCard_missingInformation": "Digite o nome da loja e escaneie um cartão!"
+  }
+  

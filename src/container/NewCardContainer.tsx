@@ -5,6 +5,7 @@ import { BarcodeType } from "../types/BarcodeTypes";
 import Logger from "../services/Logger/logger";
 import { useTranslation } from "react-i18next";
 import { CustomerCard } from "../types/CustomerCard";
+import showAdInterstitial from "../services/Ads/AdInterstitial";
 
 interface NewCardContainerProps {
   isPopupOpen: boolean;
@@ -64,6 +65,7 @@ const NewCardContainer: React.FC<NewCardContainerProps> = ({
         setShopName("");
 
         alert(t("newCard_addedSuccessfully"));
+        showAdInterstitial();
         closeAddNewCard();
       } catch (error) {
         Logger.error("Error while saving the new customer card:" + error);

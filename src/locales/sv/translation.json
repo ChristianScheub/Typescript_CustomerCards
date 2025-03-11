@@ -1,0 +1,27 @@
+{
+    "settings_Title": "Inställningar",
+    "settings_DeleteAll": "Ta bort all lokal data",
+    "settings_DeleteUserAndData": "Ta bort användare",
+    "settings_DeleteUserConfirmDialog": "Är du säker på att du vill ta bort användaren?",
+    "settings_DeleteUserErrorContactAdmin": "Ett fel uppstod. Logga ut och logga in igen. Om problemet kvarstår, kontakta oss via den juridiska informationen.",
+    "settings_EmailPasswordRequiredToDelete": "Du måste vara inloggad för att ta bort ditt konto!",
+    "settings_Information": "Information",
+    "settings_Datenschutz": "Integritetspolicy",
+    "settings_Impressum": "Juridisk information",
+    "settings_GitHubRepo": "GitHub-repository",
+    "setting_Menu_OpenSourceModulList": "Använda bibliotek",
+    "setting_OpenSurceModulListTItle": "Använda NPM-bibliotek",
+    "setting_OpenSourceModulListClose": "Stäng",
+    "settings_Dialog_DeleteAllSuccessful": "All data har tagits bort. Starta om appen för att förhindra att ny data sparas!",
+    "settings_Dialog_DeleteAll": "Är du säker på att du vill ta bort alla poster?",
+    "navbar_searchForm": "Sök efter kort...",
+    "noCardsThere": "Inga kort ännu... Tryck på plusknappen för att lägga till ett!",
+    "newCard_Title": "Nytt kundkort",
+    "newCard_shopForm": "Ange butikens namn",
+    "newCard_selectColor": "Välj färg",
+    "newCard_scannedSuccessfully": "Skannat framgångsrikt: ",
+    "newCard_addedSuccessfully": "Lagt till framgångsrikt!",
+    "newCard_errorAdding": "Ett fel uppstod, försök igen!",
+    "newCard_missingInformation": "Ange butikens namn och skanna ett kort!"
+  }
+  

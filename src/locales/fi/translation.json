@@ -1,0 +1,27 @@
+{
+    "settings_Title": "Asetukset",
+    "settings_DeleteAll": "Poista kaikki paikalliset tiedot",
+    "settings_DeleteUserAndData": "Poista käyttäjä",
+    "settings_DeleteUserConfirmDialog": "Oletko varma, että haluat poistaa käyttäjän?",
+    "settings_DeleteUserErrorContactAdmin": "Valitettavasti tapahtui virhe. Kirjaudu ulos ja sisään uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä oikeudellisen ilmoituksen mukaisesti.",
+    "settings_EmailPasswordRequiredToDelete": "Sinun on kirjauduttava sisään poistaaksesi tilisi!",
+    "settings_Information": "Tiedot",
+    "settings_Datenschutz": "Tietosuojakäytäntö",
+    "settings_Impressum": "Oikeudellinen ilmoitus",
+    "settings_GitHubRepo": "GitHub-repositorio",
+    "setting_Menu_OpenSourceModulList": "Käytetyt kirjastot",
+    "setting_OpenSurceModulListTItle": "Käytetyt NPM-kirjastot",
+    "setting_OpenSourceModulListClose": "Sulje",
+    "settings_Dialog_DeleteAllSuccessful": "Kaikki tiedot on poistettu onnistuneesti. Käynnistä sovellus uudelleen, jotta uusia tietoja ei tallenneta!",
+    "settings_Dialog_DeleteAll": "Oletko varma, että haluat poistaa kaikki merkinnät?",
+    "navbar_searchForm": "Etsi korttia...",
+    "noCardsThere": "Ei kortteja vielä... Lisää painamalla plus-painiketta!",
+    "newCard_Title": "Uusi asiakaskortti",
+    "newCard_shopForm": "Syötä kaupan nimi",
+    "newCard_selectColor": "Valitse väri",
+    "newCard_scannedSuccessfully": "Skannattu onnistuneesti: ",
+    "newCard_addedSuccessfully": "Lisätty onnistuneesti!",
+    "newCard_errorAdding": "Tapahtui virhe, yritä uudelleen!",
+    "newCard_missingInformation": "Anna kaupan nimi ja skannaa kortti!"
+  }
+  

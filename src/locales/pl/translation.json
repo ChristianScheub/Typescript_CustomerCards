@@ -1,0 +1,27 @@
+{
+    "settings_Title": "Ustawienia",
+    "settings_DeleteAll": "Usuń wszystkie dane lokalne",
+    "settings_DeleteUserAndData": "Usuń użytkownika",
+    "settings_DeleteUserConfirmDialog": "Czy na pewno chcesz usunąć użytkownika?",
+    "settings_DeleteUserErrorContactAdmin": "Wystąpił błąd. Wyloguj się i zaloguj ponownie. Jeśli problem nie ustąpi, skontaktuj się z nami przez informacje prawne.",
+    "settings_EmailPasswordRequiredToDelete": "Aby usunąć konto, musisz się zalogować!",
+    "settings_Information": "Informacje",
+    "settings_Datenschutz": "Polityka prywatności",
+    "settings_Impressum": "Nota prawna",
+    "settings_GitHubRepo": "Repozytorium GitHub",
+    "setting_Menu_OpenSourceModulList": "Używane biblioteki",
+    "setting_OpenSurceModulListTItle": "Używane biblioteki NPM",
+    "setting_OpenSourceModulListClose": "Zamknij",
+    "settings_Dialog_DeleteAllSuccessful": "Wszystkie dane zostały pomyślnie usunięte. Uruchom ponownie aplikację, aby zapobiec zapisaniu nowych danych!",
+    "settings_Dialog_DeleteAll": "Czy na pewno chcesz usunąć wszystkie wpisy?",
+    "navbar_searchForm": "Wyszukaj kartę...",
+    "noCardsThere": "Brak kart... Naciśnij przycisk plus, aby dodać!",
+    "newCard_Title": "Nowa karta klienta",
+    "newCard_shopForm": "Wpisz nazwę sklepu",
+    "newCard_selectColor": "Wybierz kolor",
+    "newCard_scannedSuccessfully": "Pomyślnie zeskanowano: ",
+    "newCard_addedSuccessfully": "Pomyślnie dodano!",
+    "newCard_errorAdding": "Wystąpił błąd, spróbuj ponownie!",
+    "newCard_missingInformation": "Wpisz nazwę sklepu i zeskanuj kartę!"
+  }
+  
