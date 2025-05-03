@@ -1,24 +1,16 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Logger from "../services/Logger/logger";
-import { BarcodeType } from "../types/BarcodeTypes";
+import { CardTypeEnum, CardType } from "../types/BarcodeTypes";
 import { Barcode, BarcodeScanner } from '@capacitor-mlkit/barcode-scanning';
 
 interface ScannerProps {
-  onScan: (data: string | null, format: BarcodeType) => void;
+  onScan: (data: string | null, format: CardType) => void;
 }
 
 export const ScannerComponent: React.FC<ScannerProps> = ({ onScan }) => {
   const { t } = useTranslation();
 
-  // Mapping von ML Kit Format-Strings auf den internen BarcodeType
-  const formatMapping: { [key: string]: BarcodeType } = {
-    EAN_13: BarcodeType.EAN13,
-    CODE_128: BarcodeType.CODE128,
-    UPC_A: BarcodeType.UPC_A,
-    CODE_39: BarcodeType.CODE39,
-    QR_CODE: BarcodeType.QRCode,
-  };
 
   const requestPermissions = async (): Promise<boolean> => {
     try {
@@ -44,7 +36,7 @@ export const ScannerComponent: React.FC<ScannerProps> = ({ onScan }) => {
         const supportResult = await BarcodeScanner.isSupported();
         if (!supportResult.supported) {
           Logger.error("Barcode-Scanning wird auf diesem Gerät nicht unterstützt.");
-          onScan(null, BarcodeType.CODE128);
+          onScan(null, CardTypeEnum.CODE128);
           return;
         }
 
@@ -52,7 +44,7 @@ export const ScannerComponent: React.FC<ScannerProps> = ({ onScan }) => {
         const granted = await requestPermissions();
         if (!granted) {
           await presentAlert();
-          onScan(null, BarcodeType.CODE128);
+          onScan(null, CardTypeEnum.CODE128);
           return;
         }
 
@@ -62,14 +54,15 @@ export const ScannerComponent: React.FC<ScannerProps> = ({ onScan }) => {
 
         if (barcodes.length > 0) {
           const barcode: Barcode = barcodes[0];
-          const mappedFormat = formatMapping[barcode.format] || BarcodeType.CODE128;
-          onScan(barcode.rawValue, mappedFormat);
+          const format = barcode.format as CardType;
+          Logger.info("Scan Photo from camera:"+ JSON.stringify(barcode));
+          onScan(barcode.rawValue, format);
         } else {
-          onScan(null, BarcodeType.CODE128);
+          onScan(null, CardTypeEnum.CODE128);
         }
       } catch (error) {
         Logger.error("Scan-Fehler: " + error);
-        onScan(null, BarcodeType.CODE128);
+        onScan(null, CardTypeEnum.CODE128);
       }
     };
 
@@ -82,7 +75,6 @@ export const ScannerComponent: React.FC<ScannerProps> = ({ onScan }) => {
 
   return (
     <div className="scanner-overlay">
-      {/* Hier können zusätzliche UI-Elemente ergänzt werden */}
     </div>
   );
 };

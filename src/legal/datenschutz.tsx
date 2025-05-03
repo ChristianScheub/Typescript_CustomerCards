@@ -1,12 +1,16 @@
 import { Card } from "react-bootstrap";
-import { datenschutz_text } from "./app_texts";
 import CodeToTextParser from "./codeToTextParser";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Datenschutz: React.FC = () => {
+  const { t } = useTranslation();
+  const lines = Array.from({ length: 34 }, (_, i) =>
+    t(`privacy.line_${i + 1}`)
+  );
 
   return (
-    <div    >
+    <div>
       <div
         style={{
           marginTop: "env(safe-area-inset-top)",
@@ -16,7 +20,9 @@ const Datenschutz: React.FC = () => {
           <Card className="mb-3 margin2vw">
             <Card.Header as="h2">Infos</Card.Header>
             <Card.Body>
-              <CodeToTextParser code={datenschutz_text} />
+              {lines.map((line, index) => (
+                <CodeToTextParser key={index} code={line} />
+              ))}
             </Card.Body>
           </Card>
         </div>

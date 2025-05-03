@@ -3,7 +3,7 @@ import { ScannerComponent } from "../../ui/Scanner";
 import MaterialInput from "../../ui/MaterialInput";
 import FloatingBtn, { ButtonAlignment } from "../../ui/floatingBtn/floatingBtn";
 import { FaRegSave } from "react-icons/fa";
-import { BarcodeType } from "../../types/BarcodeTypes";
+import { CardType } from "../../types/BarcodeTypes";
 import { featureFlag_Debug_View } from "../../config/featureFlags";
 import FileUploadScanner from "../../ui/FileUpload";
 import Button from "react-bootstrap/Button";
@@ -21,7 +21,7 @@ interface NewCardViewProps {
   color: string;
   closePopup: () => void;
   onSetScannerActive: (active: boolean) => void;
-  onScan: (data: string | null, format: BarcodeType) => void;
+  onScan: (data: string | null, format: CardType) => void;
   onScannedCode: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onAddCard: () => void;
   onColorChange: (event: React.ChangeEvent<HTMLInputElement>) => void;

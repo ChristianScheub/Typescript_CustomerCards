@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NewCardView from "../views/NewCustomerCard/NewCardView";
 import sqliteService from "../services/SQLiteService";
-import { BarcodeType } from "../types/BarcodeTypes";
+import { CardTypeEnum, CardType } from "../types/BarcodeTypes";
 import Logger from "../services/Logger/logger";
 import { useTranslation } from "react-i18next";
 import { CustomerCard } from "../types/CustomerCard";
@@ -22,8 +22,8 @@ const NewCardContainer: React.FC<NewCardContainerProps> = ({
   const [color, setColor] = useState<string>("");
   const { t } = useTranslation();
 
-  const [barcodeFormat, setBarcodeFormat] = useState<BarcodeType>(
-    BarcodeType.CODE128
+  const [barcodeFormat, setBarcodeFormat] = useState<CardType>(
+    CardTypeEnum.CODE128
   );
 
   const handleShopNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,10 +41,12 @@ const NewCardContainer: React.FC<NewCardContainerProps> = ({
     setColor(event.target.value);
   };
 
-  const handleScan = (data: string | null, format: BarcodeType) => {
+  const handleScan = (data: string | null, format: CardType) => {
     setScannedCode(data);
     setBarcodeFormat(format);
     setIsScannerActive(false);
+    Logger.info("Scanned Code:" + JSON.stringify(data));
+    Logger.info("Scanned Code Format"+format);
   };
 
   const handleAddCard = async () => {

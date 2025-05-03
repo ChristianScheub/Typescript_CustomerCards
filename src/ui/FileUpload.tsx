@@ -1,74 +1,56 @@
 import React from "react";
 import Logger from "../services/Logger/logger";
 import { Barcode, BarcodeScanner } from "@capacitor-mlkit/barcode-scanning";
-import { BarcodeType } from "../types/BarcodeTypes";
+import { CardType } from "../types/BarcodeTypes";
 import { Filesystem, Directory } from "@capacitor/filesystem";
 import Button from "react-bootstrap/esm/Button";
 import { FaRegFileImage } from "react-icons/fa";
 
 interface FileUploadScannerProps {
-  onScan: (data: string | null, format: BarcodeType) => void;
+  onScan: (data: string | null, format: CardType) => void;
 }
 
 const FileUploadScanner: React.FC<FileUploadScannerProps> = ({ onScan }) => {
-  const formatMapping: { [key: string]: BarcodeType } = {
-    EAN_13: BarcodeType.EAN13,
-    CODE_128: BarcodeType.CODE128,
-    UPC_A: BarcodeType.UPC_A,
-    CODE_39: BarcodeType.CODE39,
-    QR_CODE: BarcodeType.QRCode,
-  };
-
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       const file = e.target.files[0];
 
-      // Lese die Datei als Base64
       const reader = new FileReader();
       reader.onload = async () => {
         try {
           const result = reader.result as string;
-          // Entferne den Data-URL-Header, falls vorhanden
-          const base64Data = result.includes(",")
-            ? result.split(",")[1]
-            : result;
+          const base64Data = result.includes(",") ? result.split(",")[1] : result;
           const filename = `barcode-upload-${Date.now()}.png`;
 
-          // Schreibe die Datei in das Cache-Verzeichnis
           const writeResult = await Filesystem.writeFile({
             path: filename,
             data: base64Data,
             directory: Directory.Cache,
           });
-          const filePath = writeResult.uri; // Dieser Pfad wird vom nativen Layer genutzt
+          const filePath = writeResult.uri;
 
-          Logger.info(
-            "Barcode-Scan aus hochgeladenem Bild starten mit Pfad: " + filePath
-          );
-          const { barcodes } = await BarcodeScanner.readBarcodesFromImage({
-            path: filePath,
-          });
+          Logger.info("Barcode-Scan aus hochgeladenem Bild starten mit Pfad: " + filePath);
+          const { barcodes } = await BarcodeScanner.readBarcodesFromImage({ path: filePath });
 
           if (barcodes.length > 0) {
             const barcode: Barcode = barcodes[0];
-            const mappedFormat =
-              formatMapping[barcode.format] || BarcodeType.CODE128;
-            onScan(barcode.rawValue, mappedFormat);
+            const format = barcode.format as CardType;
+            Logger.info("Scan File Upload: " + JSON.stringify(barcode));
+            onScan(barcode.rawValue, format);
           } else {
-            onScan(null, BarcodeType.CODE128);
+            onScan(null, "CODE128"); // Fallback für leere Scans
           }
         } catch (error) {
-          Logger.error("Fehler beim Scannen des Bildes: " + error);
-          onScan(null, BarcodeType.CODE128);
+          Logger.error("Error while scanning image: " + error);
+          onScan(null, "CODE128");
         }
       };
 
       reader.onerror = (event) => {
         const error = (event.target as FileReader).error;
-        const errorMessage =
-          error instanceof DOMException ? error.message : "Unbekannter Fehler";
+        const errorMessage = error instanceof DOMException ? error.message : "Unbekannter Fehler";
         Logger.error("Fehler beim Lesen der Datei: " + errorMessage);
-        onScan(null, BarcodeType.CODE128);
+        onScan(null, "CODE128");
       };
 
       reader.readAsDataURL(file);
