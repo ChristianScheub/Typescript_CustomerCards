@@ -104,13 +104,6 @@
     "path": "/Users/christianscheub/Documents/Develope/Capacitor/KundenkartenApp/Typescript_CustomerCards/node_modules/@capacitor/android",
     "licenseFile": "/Users/christianscheub/Documents/Develope/Capacitor/KundenkartenApp/Typescript_CustomerCards/node_modules/@capacitor/android/LICENSE"
   },
-  "@capacitor/barcode-scanner@2.0.1": {
-    "licenses": "MIT",
-    "repository": "git+github.com/ionic-team/capacitor-barcode-scanner",
-    "publisher": "OutSystems",
-    "path": "/Users/christianscheub/Documents/Develope/Capacitor/KundenkartenApp/Typescript_CustomerCards/node_modules/@capacitor/barcode-scanner",
-    "licenseFile": "/Users/christianscheub/Documents/Develope/Capacitor/KundenkartenApp/Typescript_CustomerCards/node_modules/@capacitor/barcode-scanner/LICENSE"
-  },
   "@capacitor/cli@6.2.0": {
     "licenses": "MIT",
     "repository": "https://github.com/ionic-team/capacitor",
