@@ -46,7 +46,7 @@
   "privacy.line_20": "- お客様のIPアドレス",
   "privacy.line_21": "- ウェブサイト/アプリとのインタラクションに関する情報",
   "privacy.line_22": "- デバイス固有の情報",
-  "privacy.line_23": "収集されたデータは、Googleのプライバシーポリシーに従って処理されます。詳細については、<a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a>および<a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a>のプライバシーポリシーをご参照ください。 <br /> <br />",
+  "privacy.line_23": "収集されたデータは、Googleのプライバシーポリシーに従って処理されます。詳細については、Google AdMobおよびGoogle AdSenseのプライバシーポリシーをご覧ください。<br /> <br />パーソナライズ広告の同意を得るために、<strong>Googleユーザーメッセージングプラットフォーム（UMP）</strong>を使用しています。これは、<strong>IAB Europe</strong>の<strong>Transparency and Consent Framework（TCF）バージョン2.2</strong>に基づいています。アプリの初回起動時または以前の選択が期限切れになった後に、データ処理に同意するかどうか、またその範囲を指定できる同意リクエストが表示されます。収集された同意には、パーソナライズ広告、測定、第三者への共有などが含まれます。あなたの選択はローカルに保存され、いつでも取り消しまたは変更することができます。<br /> <br />",
   "privacy.line_24": "<strong>4. データの販売</strong><br />",
   "privacy.line_25": "私たちはお客様のデータを販売しません。AdMobおよびAdSenseによって収集されたデータは、それぞれの提供者のプライバシーポリシーの対象となります。 <br /> <br />",
   "privacy.line_26": "<strong>5. お客様の権利</strong><br />",
@@ -57,5 +57,6 @@
   "privacy.line_31": "個人データとは、識別されたまたは識別可能な自然人に関連する情報を指します。この文脈では、AdMobおよびAdSenseによって個人データが収集および処理される可能性があります。 <br /> <br />",
   "privacy.line_32": "<strong>8. このプライバシーポリシーの変更</strong><br />",
   "privacy.line_33": "私たちは、法的要件に準拠するため、またはデータ処理の実践の変更を反映するために、このプライバシーポリシーを変更する権利を留保します。最新情報を得るために、この声明を定期的にご確認ください。 <br />",
-  "privacy.line_34": "日付：2025年3月9日 <br /> <br />"
+  "privacy.line_34": "日付：2025年5月3日 <br /> <br />",
+  "privacy.update_2025_05": "プライバシーポリシーを更新しました。データ処理への同意を得るために、Google AdMobの同意ダイアログ（User Messaging Platform）を使用していることを明確にしました。更新されたプライバシーポリシーをご確認ください。"
 }

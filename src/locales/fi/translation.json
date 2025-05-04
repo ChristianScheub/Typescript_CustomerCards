@@ -46,8 +46,7 @@
   "privacy.line_20": "- IP-osoitteesi",
   "privacy.line_21": "- Tiedot vuorovaikutuksestasi verkkosivuston/sovelluksen kanssa",
   "privacy.line_22": "- Laitekohtaiset tiedot",
-  "privacy.line_23": "Kerätyt tiedot käsitellään Googlen tietosuojakäytäntöjen mukaisesti. Lisätietoja löydät <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> ja <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a> -tietosuojakäytännöistä. <br /> <br />",
-  "privacy.line_24": "<strong>4. Tietojen myynti</strong><br />",
+  "privacy.line_23": "Kerätyt tiedot käsitellään Googlen tietosuojakäytäntöjen mukaisesti. Lisätietoja löydät <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> ja <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a> tietosuojakäytännöistä. <br /> <br />Henkilökohtaistettujen mainosten suostumuksen hankkimiseksi käytämme <strong>Google User Messaging Platform (UMP)</strong> -alustaa, joka perustuu <strong>IAB Europen Transparency and Consent Framework (TCF) versioon 2.2</strong>. Sovelluksen ensimmäisellä käynnistyskerralla tai aiemman päätöksesi vanhennuttua sinulle näytetään suostumuspyyntö, jossa voit määrittää, hyväksytkö tietojesi käsittelyn ja missä laajuudessa. Kerätyt suostumukset koskevat muun muassa henkilökohtaistettuja mainoksia, mittauksia ja tietojen jakamista kolmansille osapuolille. Valintasi tallennetaan paikallisesti ja niitä voidaan muuttaa tai peruuttaa milloin tahansa. <br /> <br />",  "privacy.line_24": "<strong>4. Tietojen myynti</strong><br />",
   "privacy.line_25": "Emme myy tietojasi. AdMobin ja AdSensen keräämät tiedot kuuluvat kyseisten palveluntarjoajien tietosuojakäytäntöjen piiriin. <br /> <br />",
   "privacy.line_26": "<strong>5. Oikeutesi</strong><br />",
   "privacy.line_27": "Sinulla on oikeus pyytää tietoja sinusta tallennetuista tiedoista, pyytää niiden oikaisemista tai poistamista sekä rajoittaa käsittelyä. Koska emme tallenna omia tietoja, nämä oikeudet koskevat AdMobin ja AdSensen keräämiä tietoja. Ota yhteyttä kyseisiin palveluntarjoajiin saadaksesi lisätietoja ja käyttääksesi oikeuksiasi. <br /> <br />",
@@ -57,5 +56,5 @@
   "privacy.line_31": "Henkilötiedot ovat tietoja, jotka liittyvät tunnistettuun tai tunnistettavissa olevaan luonnolliseen henkilöön. Tässä yhteydessä AdMob ja AdSense voivat kerätä ja käsitellä henkilötietoja. <br /> <br />",
   "privacy.line_32": "<strong>8. Tietosuojakäytännön muutokset</strong><br />",
   "privacy.line_33": "Pidätämme oikeuden muuttaa tätä tietosuojakäytäntöä lakisääteisten vaatimusten täyttämiseksi tai tietojenkäsittelykäytäntöjemme muutosten heijastamiseksi. Tarkista tämä lausunto säännöllisesti pysyäksesi ajan tasalla. <br />",
-  "privacy.line_34": "Päivämäärä: 09.03.2025 <br /> <br />"
-}
+  "privacy.line_34": "Päivämäärä: 03.05.2025 <br /> <br />",
+  "privacy.update_2025_05": "Tietosuojakäytäntömme on päivitetty. Olemme nyt tarkentaneet, että käytämme Google AdMobin suostumusvalintaikkunaa (User Messaging Platform) saadaksemme suostumuksesi tietojenkäsittelyyn. Tutustu päivitettyyn tietosuojakäytäntöön."}

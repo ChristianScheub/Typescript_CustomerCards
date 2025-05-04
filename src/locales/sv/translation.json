@@ -46,8 +46,7 @@
   "privacy.line_20": "- Din IP-adress",
   "privacy.line_21": "- Information om dina interaktioner med webbplatsen/appen",
   "privacy.line_22": "- Enhetsspecifik information",
-  "privacy.line_23": "De insamlade uppgifterna behandlas i enlighet med Googles integritetspolicyer. För mer information, vänligen se integritetspolicyerna för <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> och <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a>. <br /> <br />",
-  "privacy.line_24": "<strong>4. Försäljning av data</strong><br />",
+  "privacy.line_23": "De insamlade uppgifterna behandlas i enlighet med Googles sekretesspolicyer. För mer information, se Googles sekretesspolicyer för AdMob och AdSense. <br /> <br />För att inhämta ditt samtycke till personanpassad reklam använder vi <strong>Google User Messaging Platform (UMP)</strong>, som bygger på <strong>Transparency and Consent Framework (TCF) Version 2.2</strong> från <strong>IAB Europe</strong>. Vid första starten av appen eller efter att ditt tidigare beslut har löpt ut kommer du att presenteras med en samtyckesförfrågan där du kan ange om och i vilken omfattning du samtycker till databehandling. De insamlade samtyckena gäller bland annat personanpassade annonser, mätningar och delning med tredje part. Ditt val sparas lokalt och kan när som helst återkallas eller ändras. <br /> <br />",  "privacy.line_24": "<strong>4. Försäljning av data</strong><br />",
   "privacy.line_25": "Vi säljer inte dina uppgifter. De data som samlas in av AdMob och AdSense omfattas av respektive leverantörers integritetspolicyer. <br /> <br />",
   "privacy.line_26": "<strong>5. Dina rättigheter</strong><br />",
   "privacy.line_27": "Du har rätt att begära information om de uppgifter som lagras om dig, begära rättelse eller radering av dessa samt begränsa behandlingen. Eftersom vi inte lagrar egna uppgifter, avser dessa rättigheter de uppgifter som samlas in av AdMob och AdSense. Vänligen kontakta respektive leverantör för mer information och för att utöva dina rättigheter. <br /> <br />",
@@ -57,5 +56,6 @@
   "privacy.line_31": "Personuppgifter är information som rör en identifierad eller identifierbar fysisk person. I detta sammanhang kan personuppgifter samlas in och behandlas av AdMob och AdSense. <br /> <br />",
   "privacy.line_32": "<strong>8. Ändringar av denna integritetspolicy</strong><br />",
   "privacy.line_33": "Vi förbehåller oss rätten att ändra denna integritetspolicy för att uppfylla lagkrav eller för att återspegla ändringar i våra databehandlingsrutiner. Vänligen granska denna policy regelbundet för att hålla dig informerad. <br />",
-  "privacy.line_34": "Datum: 2025-03-09 <br /> <br />"
+  "privacy.line_34": "Datum: 2025-05-03 <br /> <br />",
+  "privacy.update_2025_05": "Vår integritetspolicy har uppdaterats. Vi anger nu specifikt att vi använder Google AdMob:s samtyckesdialog (User Messaging Platform) för att inhämta ditt samtycke till databehandling. Vänligen granska den uppdaterade integritetspolicyn."
 }

@@ -69,7 +69,6 @@ export const ScannerComponent: React.FC<ScannerProps> = ({ onScan }) => {
     startScan();
 
     return () => {
-      // Falls @capacitor-mlkit/barcode-scanning eine Methode zum Stoppen des Scans bereitstellt, kann diese hier aufgerufen werden.
     };
   }, [onScan, t]);
 

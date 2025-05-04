@@ -23,6 +23,8 @@ const Datenschutz: React.FC = () => {
               {lines.map((line, index) => (
                 <CodeToTextParser key={index} code={line} />
               ))}
+              <a href="https://policies.google.com/privacy">Google: https://policies.google.com/privacy</a>
+              <br /><br /><br /><br />
             </Card.Body>
           </Card>
         </div>

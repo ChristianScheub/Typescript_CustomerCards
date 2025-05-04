@@ -46,8 +46,7 @@
   "privacy.line_20": "- Uw IP-adres",
   "privacy.line_21": "- Informatie over uw interacties met de website/app",
   "privacy.line_22": "- Apparaatspecifieke informatie",
-  "privacy.line_23": "De verzamelde gegevens worden verwerkt in overeenstemming met het privacybeleid van Google. Meer informatie vindt u in het privacybeleid van <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> en <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a>. <br /> <br />",
-  "privacy.line_24": "<strong>4. Verkoop van gegevens</strong><br />",
+  "privacy.line_23": "De verzamelde gegevens worden verwerkt in overeenstemming met het privacybeleid van Google. Meer informatie vindt u in het privacybeleid van Google AdMob en Google AdSense. <br /> <br />Om uw toestemming voor gepersonaliseerde advertenties te verkrijgen, gebruiken we het <strong>Google User Messaging Platform (UMP)</strong>, dat is gebaseerd op het <strong>Transparency and Consent Framework (TCF) Versie 2.2</strong> van <strong>IAB Europe</strong>. Bij het eerste starten van de app of na het verlopen van uw vorige beslissing, wordt u een toestemmingsverzoek getoond waarmee u kunt aangeven of en in welke mate u instemt met de gegevensverwerking. De verzamelde toestemmingen hebben betrekking op onder andere gepersonaliseerde advertenties, metingen en delen met derden. Uw keuzes worden lokaal opgeslagen en kunnen op elk moment worden ingetrokken of aangepast. <br /> <br />",    "privacy.line_24": "<strong>4. Verkoop van gegevens</strong><br />",
   "privacy.line_25": "Wij verkopen geen van uw gegevens. De door AdMob en AdSense verzamelde gegevens vallen onder het privacybeleid van de respectieve aanbieders. <br /> <br />",
   "privacy.line_26": "<strong>5. Uw rechten</strong><br />",
   "privacy.line_27": "U heeft het recht om informatie op te vragen over de gegevens die over u zijn opgeslagen, om correctie of verwijdering ervan te verzoeken en om de verwerking te beperken. Aangezien wij zelf geen gegevens opslaan, hebben deze rechten betrekking op de gegevens die door AdMob en AdSense worden verzameld. Neem contact op met de respectieve aanbieders voor meer informatie en om uw rechten uit te oefenen. <br /> <br />",
@@ -57,5 +56,6 @@
   "privacy.line_31": "Persoonsgegevens zijn informatie die betrekking heeft op een geïdentificeerde of identificeerbare natuurlijke persoon. In dit verband kunnen persoonsgegevens worden verzameld en verwerkt door AdMob en AdSense. <br /> <br />",
   "privacy.line_32": "<strong>8. Wijzigingen in dit privacybeleid</strong><br />",
   "privacy.line_33": "Wij behouden ons het recht voor om dit privacybeleid te wijzigen om te voldoen aan wettelijke vereisten of om wijzigingen in onze gegevensverwerkingspraktijken weer te geven. Controleer dit beleid regelmatig om op de hoogte te blijven. <br />",
-  "privacy.line_34": "Datum: 09-03-2025 <br /> <br />"
+  "privacy.line_34": "Datum: 03-05-2025 <br /> <br />",
+  "privacy.update_2025_05": "Ons privacybeleid is bijgewerkt. We geven nu specifiek aan dat we de Google AdMob-toestemmingsdialoog (User Messaging Platform) gebruiken om uw toestemming voor gegevensverwerking te verkrijgen. Bekijk het bijgewerkte privacybeleid."
 }

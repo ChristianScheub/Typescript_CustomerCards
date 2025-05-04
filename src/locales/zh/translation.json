@@ -46,7 +46,7 @@
   "privacy.line_20": "- 您的 IP 地址",
   "privacy.line_21": "- 您与网站/应用程序的交互信息",
   "privacy.line_22": "- 设备特定信息",
-  "privacy.line_23": "收集的数据根据 Google 的隐私政策进行处理。更多信息请参阅 <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> 和 <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a> 的隐私政策。<br /> <br />",
+  "privacy.line_23": "收集的数据将根据 Google 的隐私政策进行处理。有关更多信息，请参阅 Google AdMob 和 Google AdSense 的隐私政策。<br /> <br />为获取您对个性化广告的同意，我们使用 <strong>Google 用户消息平台（UMP）</strong>，该平台基于 <strong>IAB Europe</strong> 的 <strong>透明度与同意框架（TCF）2.2 版本</strong>。在首次启动应用或您先前的决定过期后，系统将向您显示一个同意请求，您可以在其中指定是否以及在多大程度上同意数据处理。收集的同意涵盖个性化广告、测量和与第三方的共享等内容。您的选择将被本地存储，并可随时撤销或更改。<br /> <br />",
   "privacy.line_24": "<strong>4. 数据销售</strong><br />",
   "privacy.line_25": "我们不会出售您的任何数据。AdMob 和 AdSense 收集的数据受各自提供商的隐私政策约束。<br /> <br />",
   "privacy.line_26": "<strong>5. 您的权利</strong><br />",
@@ -57,5 +57,6 @@
   "privacy.line_31": "个人数据是指与已识别或可识别的自然人相关的信息。在此背景下，AdMob 和 AdSense 可能会收集和处理个人数据。<br /> <br />",
   "privacy.line_32": "<strong>8. 本隐私政策的变更</strong><br />",
   "privacy.line_33": "我们保留更改本隐私政策的权利，以符合法律要求或反映我们数据处理实践的变更。请定期查看此政策以保持更新。<br />",
-  "privacy.line_34": "日期：2025年3月9日 <br /> <br />"
+  "privacy.line_34": "日期：2025年5月3日 <br /> <br />",
+  "privacy.update_2025_05": "我们的隐私政策已更新。我们现在明确指出，我们使用 Google AdMob 同意对话框（用户消息平台）来获取您对数据处理的同意。请查看更新后的隐私政策。"
 }

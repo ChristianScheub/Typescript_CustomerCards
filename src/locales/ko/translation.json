@@ -46,7 +46,7 @@
   "privacy.line_20": "- 귀하의 IP 주소",
   "privacy.line_21": "- 웹사이트/앱과의 상호작용에 대한 정보",
   "privacy.line_22": "- 장치별 정보",
-  "privacy.line_23": "수집된 데이터는 Google의 개인정보 보호정책에 따라 처리됩니다. 자세한 내용은 <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> 및 <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a>의 개인정보 보호정책을 참조하십시오. <br /> <br />",
+  "privacy.line_23": "수집된 데이터는 Google의 개인정보 보호정책에 따라 처리됩니다. 자세한 내용은 Google AdMob 및 Google AdSense의 개인정보 보호정책을 참조하십시오.<br /> <br />맞춤형 광고에 대한 동의를 얻기 위해, 우리는 <strong>Google 사용자 메시징 플랫폼(UMP)</strong>을 사용합니다. 이는 <strong>IAB Europe</strong>의 <strong>투명성과 동의 프레임워크(TCF) 버전 2.2</strong>를 기반으로 합니다. 앱을 처음 실행하거나 이전 결정이 만료된 후에는 데이터 처리에 동의할지 여부와 범위를 지정할 수 있는 동의 요청이 표시됩니다. 수집된 동의에는 맞춤형 광고, 측정 및 제3자와의 공유 등이 포함됩니다. 귀하의 선택은 로컬에 저장되며 언제든지 철회하거나 수정할 수 있습니다.<br /> <br />",
   "privacy.line_24": "<strong>4. 데이터 판매</strong><br />",
   "privacy.line_25": "저희는 귀하의 데이터를 판매하지 않습니다. AdMob 및 AdSense에서 수집한 데이터는 각 제공자의 개인정보 보호정책에 따라 처리됩니다. <br /> <br />",
   "privacy.line_26": "<strong>5. 귀하의 권리</strong><br />",
@@ -57,5 +57,6 @@
   "privacy.line_31": "개인 데이터는 식별되었거나 식별 가능한 자연인과 관련된 정보를 의미합니다. 이와 관련하여 AdMob 및 AdSense에서 개인 데이터를 수집하고 처리할 수 있습니다. <br /> <br />",
   "privacy.line_32": "<strong>8. 이 개인정보 보호정책의 변경</strong><br />",
   "privacy.line_33": "저희는 법적 요구 사항을 준수하거나 데이터 처리 관행의 변경을 반영하기 위해 이 개인정보 보호정책을 변경할 권리를 보유합니다. 최신 정보를 유지하기 위해 이 정책을 정기적으로 확인하시기 바랍니다. <br />",
-  "privacy.line_34": "날짜: 2025년 3월 9일 <br /> <br />"
+  "privacy.line_34": "날짜: 2025년 5월 3일 <br /> <br />",
+  "privacy.update_2025_05": "개인정보처리방침이 업데이트되었습니다. 데이터 처리에 대한 귀하의 동의를 얻기 위해 Google AdMob 동의 대화상자(User Messaging Platform)를 사용하고 있음을 명확히 밝혔습니다. 업데이트된 개인정보처리방침을 확인해 주시기 바랍니다."
 }

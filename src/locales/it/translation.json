@@ -46,7 +46,7 @@
   "privacy.line_20": "- Il tuo indirizzo IP",
   "privacy.line_21": "- Informazioni sulle tue interazioni con il sito web/app",
   "privacy.line_22": "- Informazioni specifiche del dispositivo",
-  "privacy.line_23": "I dati raccolti vengono trattati in conformità alle politiche sulla privacy di Google. Per ulteriori informazioni, consulta le politiche sulla privacy di <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> e <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a>. <br /> <br />",
+  "privacy.line_23": "I dati raccolti vengono trattati in conformità con le politiche sulla privacy di Google. Per ulteriori informazioni, consultare le politiche sulla privacy di Google AdMob e Google AdSense. <br /> <br />Per ottenere il tuo consenso alla pubblicità personalizzata, utilizziamo la <strong>Piattaforma di Messaggistica per gli Utenti di Google (UMP)</strong>, basata sul <strong>Transparency and Consent Framework (TCF) Versione 2.2</strong> dell'<strong>IAB Europe</strong>. Al primo avvio dell'app o dopo la scadenza della tua precedente decisione, ti verrà presentata una richiesta di consenso che ti permetterà di specificare se e in che misura acconsenti al trattamento dei dati. I consensi raccolti riguardano, tra l'altro, annunci personalizzati, misurazioni e condivisione con terze parti. Le tue scelte vengono salvate localmente e possono essere revocate o modificate in qualsiasi momento. <br /> <br />",
   "privacy.line_24": "<strong>4. Vendita dei dati</strong><br />",
   "privacy.line_25": "Non vendiamo i tuoi dati. I dati raccolti da AdMob e AdSense sono soggetti alle politiche sulla privacy dei rispettivi fornitori. <br /> <br />",
   "privacy.line_26": "<strong>5. I tuoi diritti</strong><br />",
@@ -57,5 +57,6 @@
   "privacy.line_31": "I dati personali sono informazioni che si riferiscono a una persona fisica identificata o identificabile. In questo contesto, i dati personali possono essere raccolti e trattati da AdMob e AdSense. <br /> <br />",
   "privacy.line_32": "<strong>8. Modifiche a questa informativa sulla privacy</strong><br />",
   "privacy.line_33": "Ci riserviamo il diritto di modificare questa informativa sulla privacy per conformarci ai requisiti legali o per riflettere le modifiche nelle nostre pratiche di trattamento dei dati. Ti invitiamo a controllare regolarmente questa dichiarazione per rimanere aggiornato. <br />",
-  "privacy.line_34": "Data: 09.03.2025 <br /> <br />"
+  "privacy.line_34": "Data: 03.05.2025 <br /> <br />",
+  "privacy.update_2025_05": "La nostra informativa sulla privacy è stata aggiornata. Ora specifichiamo che utilizziamo la finestra di dialogo per il consenso di Google AdMob (User Messaging Platform) per ottenere il tuo consenso al trattamento dei dati. Si prega di consultare l'informativa sulla privacy aggiornata."
 }

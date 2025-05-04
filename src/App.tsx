@@ -12,11 +12,13 @@ import CustomerCardContainer from "./container/CustomerCardContainer";
 import ContainerInfo from "./container/InfoContainer";
 import { AdManager } from "./services/Ads/AdManager";
 import { makeStatusBarTransparent } from "./services/helper/statusBarUtils";
+import useDataPrivacyUpdateAlert from "./services/helper/useDataPrivacyUpdateAlert";
 
 const App: React.FC = () => {
   const theme = useDarkMode();
   const [searchQuery, setSearchQuery] = useState<string>("");
   makeStatusBarTransparent();
+  useDataPrivacyUpdateAlert();
   
   return (
     <div className={theme}>

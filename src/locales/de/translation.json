@@ -26,8 +26,8 @@
   "newCard_errorAdding": "Es ist ein Fehler aufgetreten, bitte erneut versuchen!",
   "newCard_missingInformation": "Bitte geben sie den Shop Name ein und Scannen sie eine Karte!",
 
-  "privacy.line_1": "<strong>Diese Datenschutzerklärung und die Informationen sind in Englisch und anderen Sprachen verfügbar. </strong>",
-  "privacy.line_2": "<strong>Sie wird immer angezeigt an die Sprache ihres Gerätes sofern wir die unterstützen.</strong> <br /> <br />",
+  "privacy.line_1": "<strong>Diese Datenschutzerklärung ist in Englisch und anderen Sprachen verfügbar. </strong>",
+  "privacy.line_2": "<strong>Für eine andere Sprache verstellen sie bitte einfach die Sprache ihres Gerätes.</strong> <br /> <br />",
   "privacy.line_3": "<strong>Datenschutzerklärung für Webseite/App</strong> <br /><br />",
   "privacy.line_4": "Vielen Dank für Ihren Besuch auf unserer Webseite/App. Wir legen großen Wert auf den Schutz Ihrer Daten und möchten Ihnen mit dieser Datenschutzerklärung einen Überblick darüber geben, wie wir Ihre Daten gemäß der Datenschutz-Grundverordnung (DSGVO), den europäischen Datenschutzgesetzen sowie dem California Consumer Privacy Act (CCPA) und kalifornischem Recht behandeln. <br /> <br />",
   "privacy.line_5": "<strong>1. Verantwortliche Stelle</strong><br />",
@@ -48,7 +48,7 @@
   "privacy.line_20": "- Ihre IP-Adresse",
   "privacy.line_21": "- Informationen über Ihre Interaktionen mit der Webseite/App",
   "privacy.line_22": "- Gerätespezifische Informationen",
-  "privacy.line_23": "Die gesammelten Daten werden gemäß den Datenschutzrichtlinien von Google verarbeitet. Weitere Informationen finden Sie in den Datenschutzrichtlinien von <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> und <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a>. <br /> <br />",
+  "privacy.line_23": "Die gesammelten Daten werden gemäß den Datenschutzrichtlinien von Google verarbeitet. Weitere Informationen finden Sie in den Datenschutzrichtlinien von Google AdMob und Google AdSense. <br /> <br />Zur Einholung Ihrer Einwilligung für personalisierte Werbung nutzen wir die <strong>Google User Messaging Platform (UMP)</strong>, welche auf dem <strong>Transparency and Consent Framework (TCF) Version 2.2</strong> der <strong>IAB Europe</strong> basiert. Beim ersten Start der App oder nach Ablauf Ihrer vorherigen Entscheidung wird Ihnen eine Einwilligungsabfrage angezeigt, mit der Sie festlegen können, ob und in welchem Umfang Sie der Datenverarbeitung zustimmen. Die erfassten Einwilligungen betreffen unter anderem personalisierte Anzeigen, Messungen und die Weitergabe an Dritte. Ihre Auswahl wird lokal gespeichert und kann jederzeit widerrufen oder angepasst werden. <br /> <br />",
   "privacy.line_24": "<strong>4. Verkauf von Daten</strong><br />",
   "privacy.line_25": "Wir verkaufen keine Ihrer Daten. Die von AdMob und AdSense gesammelten Daten unterliegen den Datenschutzrichtlinien der jeweiligen Anbieter. <br /> <br />",
   "privacy.line_26": "<strong>5. Ihre Rechte</strong><br />",
@@ -59,5 +59,6 @@
   "privacy.line_31": "Personenbezogene Daten sind Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. In diesem Zusammenhang können personenbezogene Daten von AdMob und AdSense gesammelt und verarbeitet werden. <br /> <br />",
   "privacy.line_32": "<strong>8. Änderungen dieser Datenschutzerklärung</strong><br />",
   "privacy.line_33": "Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern, um den rechtlichen Anforderungen zu entsprechen oder Änderungen unserer Datenverarbeitungspraktiken widerzuspiegeln. Bitte überprüfen Sie diese Erklärung regelmäßig, um auf dem Laufenden zu bleiben. <br />",
-  "privacy.line_34": "Datum: 09.03.2025 <br /> <br />"
+  "privacy.line_34": "Datum: 03.05.2025 <br /> <br />",
+  "privacy.update_2025_05":"Unsere Datenschutzerklärung wurde aktualisiert. Wir weisen nun konkret darauf hin, dass wir den Google AdMob-Zustimmungsdialog (User Messaging Platform) zur Einholung Ihrer Einwilligung in die Datenverarbeitung verwenden. Bitte prüfen Sie die aktualisierte Datenschutzerklärung."
 }

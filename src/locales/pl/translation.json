@@ -46,7 +46,7 @@
   "privacy.line_20": "- Twój adres IP",
   "privacy.line_21": "- Informacje o Twoich interakcjach ze stroną internetową/aplikacją",
   "privacy.line_22": "- Informacje specyficzne dla urządzenia",
-  "privacy.line_23": "Zebrane dane są przetwarzane zgodnie z polityką prywatności Google. Więcej informacji znajdziesz w politykach prywatności <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> i <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a>. <br /> <br />",
+  "privacy.line_23": "Zebrane dane są przetwarzane zgodnie z politykami prywatności Google. Więcej informacji można znaleźć w politykach prywatności Google AdMob i Google AdSense. <br /> <br />Aby uzyskać Twoją zgodę na spersonalizowane reklamy, korzystamy z <strong>Google User Messaging Platform (UMP)</strong>, która opiera się na <strong>Transparency and Consent Framework (TCF) Wersja 2.2</strong> organizacji <strong>IAB Europe</strong>. Przy pierwszym uruchomieniu aplikacji lub po wygaśnięciu Twojej poprzedniej decyzji, zostanie wyświetlone zapytanie o zgodę, które pozwoli Ci określić, czy i w jakim zakresie zgadzasz się na przetwarzanie danych. Zebrane zgody dotyczą m.in. spersonalizowanych reklam, pomiarów i udostępniania danych stronom trzecim. Twój wybór jest przechowywany lokalnie i może być w każdej chwili odwołany lub zmieniony. <br /> <br />",
   "privacy.line_24": "<strong>4. Sprzedaż danych</strong><br />",
   "privacy.line_25": "Nie sprzedajemy żadnych Twoich danych. Dane zbierane przez AdMob i AdSense podlegają politykom prywatności odpowiednich dostawców. <br /> <br />",
   "privacy.line_26": "<strong>5. Twoje prawa</strong><br />",
@@ -57,5 +57,6 @@
   "privacy.line_31": "Dane osobowe to informacje odnoszące się do zidentyfikowanej lub możliwej do zidentyfikowania osoby fizycznej. W tym kontekście dane osobowe mogą być zbierane i przetwarzane przez AdMob i AdSense. <br /> <br />",
   "privacy.line_32": "<strong>8. Zmiany w niniejszej polityce prywatności</strong><br />",
   "privacy.line_33": "Zastrzegamy sobie prawo do zmiany niniejszej polityki prywatności w celu dostosowania jej do wymogów prawnych lub odzwierciedlenia zmian w naszych praktykach przetwarzania danych. Prosimy o regularne sprawdzanie tego oświadczenia, aby być na bieżąco. <br />",
-  "privacy.line_34": "Data: 09.03.2025 <br /> <br />"
+  "privacy.line_34": "Data: 03.05.2025 <br /> <br />",
+  "privacy.update_2025_05": "Nasza polityka prywatności została zaktualizowana. Obecnie wyraźnie informujemy, że korzystamy z okna dialogowego zgody Google AdMob (User Messaging Platform) w celu uzyskania Twojej zgody na przetwarzanie danych. Prosimy o zapoznanie się z zaktualizowaną polityką prywatności."
 }

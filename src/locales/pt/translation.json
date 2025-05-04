@@ -46,8 +46,7 @@
   "privacy.line_20": "- Twój adres IP",
   "privacy.line_21": "- Informacje o Twoich interakcjach ze stroną internetową/aplikacją",
   "privacy.line_22": "- Informacje specyficzne dla urządzenia",
-  "privacy.line_23": "Zebrane dane są przetwarzane zgodnie z polityką prywatności Google. Więcej informacji znajdziesz w politykach prywatności <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> i <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a>. <br /> <br />",
-  "privacy.line_24": "<strong>4. Sprzedaż danych</strong><br />",
+  "privacy.line_23": "Os dados coletados são processados de acordo com as políticas de privacidade do Google. Para mais informações, consulte as políticas de privacidade do Google AdMob e do Google AdSense. <br /> <br />Para obter o seu consentimento para publicidade personalizada, utilizamos a <strong>Google User Messaging Platform (UMP)</strong>, que se baseia no <strong>Transparency and Consent Framework (TCF) Versão 2.2</strong> da <strong>IAB Europe</strong>. No primeiro lançamento do aplicativo ou após a expiração da sua decisão anterior, será apresentada uma solicitação de consentimento, permitindo-lhe especificar se e em que medida concorda com o processamento de dados. Os consentimentos recolhidos dizem respeito, entre outros, a anúncios personalizados, medições e partilha com terceiros. A sua escolha é armazenada localmente e pode ser revogada ou modificada a qualquer momento. <br /> <br />",  "privacy.line_24": "<strong>4. Sprzedaż danych</strong><br />",
   "privacy.line_25": "Nie sprzedajemy żadnych Twoich danych. Dane zbierane przez AdMob i AdSense podlegają politykom prywatności odpowiednich dostawców. <br /> <br />",
   "privacy.line_26": "<strong>5. Twoje prawa</strong><br />",
   "privacy.line_27": "Masz prawo żądać informacji o przechowywanych danych na Twój temat, żądać ich poprawienia lub usunięcia, a także ograniczenia przetwarzania. Ponieważ nie przechowujemy własnych danych, prawa te dotyczą danych zbieranych przez AdMob i AdSense. Prosimy o kontakt z odpowiednimi dostawcami w celu uzyskania dalszych informacji i skorzystania z Twoich praw. <br /> <br />",
@@ -57,5 +56,6 @@
   "privacy.line_31": "Dane osobowe to informacje odnoszące się do zidentyfikowanej lub możliwej do zidentyfikowania osoby fizycznej. W tym kontekście dane osobowe mogą być zbierane i przetwarzane przez AdMob i AdSense. <br /> <br />",
   "privacy.line_32": "<strong>8. Zmiany w niniejszej polityce prywatności</strong><br />",
   "privacy.line_33": "Zastrzegamy sobie prawo do zmiany niniejszej polityki prywatności w celu dostosowania jej do wymogów prawnych lub odzwierciedlenia zmian w naszych praktykach przetwarzania danych. Prosimy o regularne sprawdzanie tego oświadczenia, aby być na bieżąco. <br />",
-  "privacy.line_34": "Data: 09.03.2025 <br /> <br />"
+  "privacy.line_34": "Data: 03.05.2025 <br /> <br />",
+  "privacy.update_2025_05": "Nossa política de privacidade foi atualizada. Agora especificamos que utilizamos a caixa de diálogo de consentimento do Google AdMob (User Messaging Platform) para obter seu consentimento para o processamento de dados. Por favor, revise a política de privacidade atualizada."
 }

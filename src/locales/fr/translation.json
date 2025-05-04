@@ -46,7 +46,7 @@
   "privacy.line_20": "- Votre adresse IP",
   "privacy.line_21": "- Informations sur vos interactions avec le site web/l'application",
   "privacy.line_22": "- Informations spécifiques à l'appareil",
-  "privacy.line_23": "Les données collectées sont traitées conformément aux politiques de confidentialité de Google. Pour plus d'informations, veuillez consulter les politiques de confidentialité de <a href=\"https://support.google.com/admob/answer/6128543\">Google AdMob</a> et <a href=\"https://support.google.com/adsense/answer/7007310\">Google AdSense</a>. <br /> <br />",
+  "privacy.line_23": "Les données collectées sont traitées conformément aux politiques de confidentialité de Google. Pour plus d'informations, veuillez consulter les politiques de confidentialité de Google AdMob et Google AdSense. <br /> <br />Pour obtenir votre consentement pour la publicité personnalisée, nous utilisons la <strong>Google User Messaging Platform (UMP)</strong>, qui est basée sur le <strong>Transparency and Consent Framework (TCF) Version 2.2</strong> de l'<strong>IAB Europe</strong>. Lors du premier lancement de l'application ou après l'expiration de votre décision précédente, une demande de consentement vous sera présentée, vous permettant de spécifier si et dans quelle mesure vous acceptez le traitement des données. Les consentements recueillis concernent notamment les annonces personnalisées, les mesures et le partage avec des tiers. Vos choix sont enregistrés localement et peuvent être révoqués ou modifiés à tout moment. <br /> <br />",
   "privacy.line_24": "<strong>4. Vente de données</strong><br />",
   "privacy.line_25": "Nous ne vendons aucune de vos données. Les données collectées par AdMob et AdSense sont soumises aux politiques de confidentialité des fournisseurs respectifs. <br /> <br />",
   "privacy.line_26": "<strong>5. Vos droits</strong><br />",
@@ -57,5 +57,6 @@
   "privacy.line_31": "Les données personnelles sont des informations se rapportant à une personne physique identifiée ou identifiable. Dans ce contexte, des données personnelles peuvent être collectées et traitées par AdMob et AdSense. <br /> <br />",
   "privacy.line_32": "<strong>8. Modifications de cette politique de confidentialité</strong><br />",
   "privacy.line_33": "Nous nous réservons le droit de modifier cette politique de confidentialité pour nous conformer aux exigences légales ou refléter les changements dans nos pratiques de traitement des données. Veuillez consulter régulièrement cette déclaration pour rester informé. <br />",
-  "privacy.line_34": "Date : 09.03.2025 <br /> <br />"
+  "privacy.line_34": "Date : 03.05.2025 <br /> <br />",
+  "privacy.update_2025_05": "Notre politique de confidentialité a été mise à jour. Nous précisons désormais que nous utilisons la boîte de dialogue de consentement Google AdMob (User Messaging Platform) pour recueillir votre consentement au traitement des données. Veuillez consulter la politique de confidentialité mise à jour."
 }
