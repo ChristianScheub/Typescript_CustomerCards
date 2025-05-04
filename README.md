@@ -143,7 +143,6 @@ According to the command npm list You can see the deeper NPM modules used and wh
 <br />├── @capacitor-community/admob@7.0.1
 <br />├── @capacitor-mlkit/barcode-scanning@7.0.0
 <br />├── @capacitor/android@6.2.0
-<br />├── @capacitor/barcode-scanner@2.0.1
 <br />├── @capacitor/cli@6.2.0
 <br />├── @capacitor/core@6.2.0
 <br />├── @capacitor/filesystem@6.0.3
