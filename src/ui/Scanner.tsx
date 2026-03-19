@@ -56,7 +56,7 @@ export const ScannerComponent: React.FC<ScannerProps> = ({ onScan }) => {
           const barcode: Barcode = barcodes[0];
           const format = barcode.format as CardType;
           Logger.info("Scan Photo from camera:"+ JSON.stringify(barcode));
-          onScan(barcode.rawValue, format);
+          onScan(barcode.rawValue ?? null, format);
         } else {
           onScan(null, CardTypeEnum.CODE128);
         }
