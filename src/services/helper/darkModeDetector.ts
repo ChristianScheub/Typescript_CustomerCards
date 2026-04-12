@@ -9,6 +9,7 @@ function useDarkMode() {
 
     mediaQuery.addEventListener('change', handleChange);
     
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(mediaQuery.matches ? 'darkMode' : 'lightMode');
 
     return () => mediaQuery.removeEventListener('change', handleChange);

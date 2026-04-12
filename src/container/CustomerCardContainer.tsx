@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import sqliteService from "../services/SQLiteService";
 import CustomerCardView from "../views/CustomerCardView/CustomerCardView";
 import Logger from "../services/Logger/logger";
@@ -24,6 +24,17 @@ const CustomerCardContainer: React.FC<CustomerCardContainerProps> = ({
     Logger.info("NEW CARD");
     setIsPopupNewCardOpen(true);
   };
+
+  const loadCards = useCallback(async () => {
+    try {
+      await sqliteService.initialize();
+      const cards = await sqliteService.getFilteredCards(searchQuery);
+      setCards(cards);
+    } catch (err) {
+      setError("Fehler beim Laden der Kundenkarten.");
+      console.error(err);
+    }
+  }, [searchQuery]);
 
   const closeAddNewCard = () => {
     setIsPopupNewCardOpen(false);
@@ -52,19 +63,11 @@ const CustomerCardContainer: React.FC<CustomerCardContainerProps> = ({
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     loadCards();
-  }, [searchQuery]);
+  }, [searchQuery, loadCards]);
 
-  const loadCards = async () => {
-    try {
-      await sqliteService.initialize();
-      const cards = await sqliteService.getFilteredCards(searchQuery);
-      setCards(cards);
-    } catch (err) {
-      setError("Fehler beim Laden der Kundenkarten.");
-      console.error(err);
-    }
-  };
+  
 
   const calculateFontSize = (text: string): string => {
     const baseSize = 10; // Basis-Schriftgröße in vw
