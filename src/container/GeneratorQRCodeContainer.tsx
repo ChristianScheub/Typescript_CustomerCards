@@ -20,8 +20,9 @@ const QRCodeGeneratorContainer: React.FC<QRCodeGeneratorContainerProps> = ({
         throw new Error("The QR Code shouldn t be 0");
       }
       setError(null);
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) setError(err.message);
+      else setError(String(err));
     }
   }, [value]);
 

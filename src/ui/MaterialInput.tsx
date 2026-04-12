@@ -30,6 +30,7 @@ const MaterialInput: React.FC<MaterialInputProps> = ({
     const parentElement = document.querySelector('.darkMode');
 
     if((inWhite===undefined||inWhite===false) &&parentElement){
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFinalInWhite(true);
     }
   }, []);

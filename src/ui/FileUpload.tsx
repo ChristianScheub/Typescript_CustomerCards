@@ -36,7 +36,7 @@ const FileUploadScanner: React.FC<FileUploadScannerProps> = ({ onScan }) => {
             const barcode: Barcode = barcodes[0];
             const format = barcode.format as CardType;
             Logger.info("Scan File Upload: " + JSON.stringify(barcode));
-            onScan(barcode.rawValue, format);
+            onScan(barcode.rawValue ?? null, format);
           } else {
             onScan(null, "CODE128"); // Fallback für leere Scans
           }

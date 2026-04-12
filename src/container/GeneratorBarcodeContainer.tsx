@@ -30,8 +30,9 @@ const BarcodeGeneratorContainer: React.FC<BarcodeGeneratorContainerProps> = ({
       }
 
       setError(null); // Reset error state on valid input
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) setError(err.message);
+      else setError(String(err));
     }
   }, [value, type]);
 
