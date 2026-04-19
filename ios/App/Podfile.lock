@@ -1,11 +1,11 @@
 PODS:
-  - Capacitor (8.3.0):
+  - Capacitor (8.3.1):
     - CapacitorCordova
   - CapacitorCommunityAdmob (8.0.0):
     - Capacitor
     - Google-Mobile-Ads-SDK (~> 12.14)
     - GoogleUserMessagingPlatform (~> 3.1)
-  - CapacitorCordova (8.3.0)
+  - CapacitorCordova (8.3.1)
   - CapacitorFilesystem (8.1.2):
     - Capacitor
     - IONFilesystemLib (~> 1.1.1)
@@ -110,9 +110,9 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/status-bar"
 
 SPEC CHECKSUMS:
-  Capacitor: 9f1f99495b474d82bccfd27b15617b84f5938144
+  Capacitor: 66895d1f43f02264d13e9eb1ea3fbc9c3e02224b
   CapacitorCommunityAdmob: 9239319646c5bc41481068d8e79d4facc1b5b65e
-  CapacitorCordova: 2e1e2bb93b2f365309dc4ff18b72b9a69a7814a9
+  CapacitorCordova: 9010447fe25e869705fcf525e5f490facde87608
   CapacitorFilesystem: 7d3e3df84be4f0d999a5d6baa23aeb30c2de6450
   CapacitorMlkitBarcodeScanning: b8b7b809bd651a5db9026973890e79472e6d58cb
   CapacitorShare: 8a565649d321a05a1ae8b525b2a9b4f2d92c70ce

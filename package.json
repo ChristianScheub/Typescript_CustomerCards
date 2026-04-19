@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npx license-checker --json --production --out src/legal/usedLibs/licenses.json",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
