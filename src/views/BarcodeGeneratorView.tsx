@@ -1,6 +1,7 @@
-import React from "react";
-import Barcode from "react-barcode";
-import { BarcodeType, CardTypeEnum } from "../types/BarcodeTypes";
+import React, { useEffect, useRef } from "react";
+import bwipjs from "bwip-js/browser";
+import { CardTypeEnum } from "../types/BarcodeTypes";
+import { toBwipType } from "../services/helper/barcodeTypeMapper";
 
 interface BarcodeGeneratorViewProps {
   value: string;
@@ -11,19 +12,32 @@ interface BarcodeGeneratorViewProps {
 }
 
 const BarcodeGeneratorView: React.FC<BarcodeGeneratorViewProps> = ({ value, type, width, color, error }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    if (error || !canvasRef.current || !value) return;
+
+    try {
+      bwipjs.toCanvas(canvasRef.current, {
+        bcid: toBwipType(type),
+        text: value,
+        scale: width + 1,
+        height: 12,
+        includetext: true,
+        textxalign: "center",
+        barcolor: color.replace("#", ""),
+        textcolor: color.replace("#", ""),
+      });
+    } catch (e) {
+      console.error("bwip-js render error:", e);
+    }
+  }, [value, type, width, color, error]);
+
   if (error) {
-    return <div style={{ color: "red" }}>Error: {error+width}</div>;
+    return <div style={{ color: "red" }}>Error: {error}</div>;
   }
 
-  return (
-    <Barcode
-      value={value}
-      format={type as BarcodeType}
-      width={2}
-      lineColor={color}
-      displayValue={true}
-    />
-  );
+  return <canvas ref={canvasRef} />;
 };
 
 export default BarcodeGeneratorView;

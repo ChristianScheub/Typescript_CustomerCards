@@ -141,47 +141,47 @@ Generate the JSON with the licenses of the NPM packages used. This can then repl
 
 # Used NPM Modules
 According to the command npm list You can see the deeper NPM modules used and which of these are used in the licenses.json.
-<br />├── @capacitor-community/admob@8.0.0
-<br />├── @capacitor-mlkit/barcode-scanning@8.0.1
-<br />├── @capacitor/android@8.3.1
-<br />├── @capacitor/cli@8.3.1
-<br />├── @capacitor/core@8.3.1
-<br />├── @capacitor/filesystem@8.1.2
-<br />├── @capacitor/ios@8.3.1
-<br />├── @capacitor/share@8.0.1
-<br />├── @capacitor/status-bar@8.0.2
-<br />├── @emnapi/wasi-threads@1.2.1 extraneous
-<br />├── @emotion/react@11.14.0
-<br />├── @emotion/styled@11.14.1
-<br />├── @eslint/js@9.39.4
-<br />├── @mui/icons-material@7.3.10
-<br />├── @mui/material@7.3.10
-<br />├── @testing-library/react@16.3.2
-<br />├── @types/qrcode@1.5.6
-<br />├── @types/react-dom@19.2.3
-<br />├── @types/react@19.2.14
-<br />├── @typescript-eslint/eslint-plugin@8.58.2
-<br />├── @typescript-eslint/parser@8.58.2
-<br />├── @vitejs/plugin-react@6.0.1
-<br />├── @zxing/library@0.21.3
-<br />├── bootstrap@5.3.8
-<br />├── canvas@3.2.3
-<br />├── eslint-plugin-react-hooks@7.1.1
-<br />├── eslint-plugin-react-refresh@0.5.2
-<br />├── eslint@9.39.4
-<br />├── globals@17.5.0
-<br />├── i18next-browser-languagedetector@8.2.1
-<br />├── i18next@25.10.10
-<br />├── qr-scanner@1.4.2
-<br />├── react-barcode@1.6.1
-<br />├── react-bootstrap@2.10.10
-<br />├── react-dom@19.2.5
-<br />├── react-i18next@16.6.6
-<br />├── react-icons@5.6.0
-<br />├── react-qr-code@2.0.18
-<br />├── react-router-dom@7.14.1
-<br />├── react@19.2.5
-<br />├── styled-components@6.4.0
-<br />├── typescript-eslint@8.58.2
-<br />├── typescript@5.9.3
-<br />└── vite@8.0.8
+<br /> ├── @capacitor-community/admob@8.0.0
+<br /> ├── @capacitor-mlkit/barcode-scanning@8.0.1
+<br /> ├── @capacitor/android@8.3.1
+<br /> ├── @capacitor/cli@8.3.1
+<br /> ├── @capacitor/core@8.3.1
+<br /> ├── @capacitor/filesystem@8.1.2
+<br /> ├── @capacitor/ios@8.3.1
+<br /> ├── @capacitor/share@8.0.1
+<br /> ├── @capacitor/status-bar@8.0.2
+<br /> ├── @emotion/react@11.14.0
+<br /> ├── @emotion/styled@11.14.1
+<br /> ├── @eslint/js@9.39.4
+<br /> ├── @mui/icons-material@7.3.10
+<br /> ├── @mui/material@7.3.10
+<br /> ├── @testing-library/react@16.3.2
+<br /> ├── @types/qrcode@1.5.6
+<br /> ├── @types/react-dom@19.2.3
+<br /> ├── @types/react@19.2.14
+<br /> ├── @typescript-eslint/eslint-plugin@8.58.2
+<br /> ├── @typescript-eslint/parser@8.58.2
+<br /> ├── @vitejs/plugin-react@6.0.1
+<br /> ├── @zxing/library@0.21.3
+<br /> ├── bootstrap@5.3.8
+<br /> ├── bwip-js@4.10.1
+<br /> ├── canvas@3.2.3
+<br /> ├── eslint-plugin-react-hooks@7.1.1
+<br /> ├── eslint-plugin-react-refresh@0.5.2
+<br /> ├── eslint@9.39.4
+<br /> ├── globals@17.5.0
+<br /> ├── i18next-browser-languagedetector@8.2.1
+<br /> ├── i18next@25.10.10
+<br /> ├── qr-scanner@1.4.2
+<br /> ├── react-barcode@1.6.1
+<br /> ├── react-bootstrap@2.10.10
+<br /> ├── react-dom@19.2.5
+<br /> ├── react-i18next@16.6.6
+<br /> ├── react-icons@5.6.0
+<br /> ├── react-qr-code@2.0.18
+<br /> ├── react-router-dom@7.14.1
+<br /> ├── react@19.2.5
+<br /> ├── styled-components@6.4.0
+<br /> ├── typescript-eslint@8.58.2
+<br /> ├── typescript@5.9.3
+<br /> └── vite@8.0.8

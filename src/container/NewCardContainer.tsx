@@ -23,7 +23,7 @@ const NewCardContainer: React.FC<NewCardContainerProps> = ({
   const { t } = useTranslation();
 
   const [barcodeFormat, setBarcodeFormat] = useState<CardType>(
-    CardTypeEnum.CODE128
+    CardTypeEnum.UPCE
   );
 
   const handleShopNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
